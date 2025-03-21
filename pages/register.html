@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container">
+
         <aside>
             <nav id="sidebar">
                 <div id="sidebar_content">
@@ -90,45 +90,27 @@
                         <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
-
-                <div id="logout">
-                    <button id="logout_btn">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span class="item-description">
-                            Logout
-                        </span>
-                    </button>
-                </div>
             </nav>
         </aside>
 
 
         <div class="main">
-            <form id="register_form">
-                <label for="date">Data:</label>
-                <input type="date" id="date" name="date" required>
-
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="number">Número:</label>
-                <input type="tel" id="number" name="number" required>
-
-                <label for="equipment">Equipamento:</label>
-                <input type="text" id="equipment" name="equipment" required>
-
-                <label for="problem">Problema Detectado:</label>
-                <textarea id="problem" name="problem" required></textarea>
-
-                <label for="sold_equipment">Equipamento Vendido:</label>
-                <input type="text" id="sold_equipment" name="sold_equipment" required>
-
-                <button type="submit">Enviar</button>
-            </form>
+            <div class="form">
+                <form method="post" action="">
+                    <input type="date" name="date" id="date" placeholder="Data" required>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                    <input type="text" name="celular" id="celular" placeholder="Numero" required>
+                    <input type="text" name="equip" id="equip" placeholder="Equipamento" required>
+                    <textarea name="problema" id="problema" placeholder="Problema Detectado"></textarea>
+                    <input type="text" name="equipVend" id="equipVend" placeholder="Equipamento Vendido">
+                    <textarea name="servico" id="servico" placeholder="Servico Realizado"></textarea>
+                    <input type="submit" name="cadastro" id="cadastro" value="CADASTRAR">
+                </form>
+            </div>
         </div>
 
 
-    </div>
+  
     <script src="../scripts/sidebar.js"></script>
 </body>
 
