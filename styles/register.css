@@ -1,7 +1,7 @@
 
 
 .form {
-    background-color: #345eb8;
+    background-color: #373737;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 10px 30px -10px black;
@@ -12,27 +12,34 @@
 .form input[type="text"],
 .form input[type="date"],
 .form textarea {
+    background-color: #434242;
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 3px transparent;
+    border-radius: 15px;
     box-sizing: border-box;
+    color: white;
+}
+
+.form input[type="text"]::placeholder{
+    color: white;
 }
 
 .form input[type="submit"] {
-    background-color: rgb(41, 40, 40);
+    background-color: #345eb8;
     color: white;
     padding: 15px 20px;
+    margin-top: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     width: 100%;
     font-size: 16px;
 }
 
 .form input[type="submit"]:hover {
-    background-color: #2e66e0;
+    background-color: #000000;
 }
 
 .form textarea {
@@ -41,4 +48,18 @@
 }
 
 
-/** Botões de Imput **/
+.celularDate{
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+.equipPro{
+    display:  flex;
+    gap: 20px;
+    color: white;
+}
+
+
+
+
