@@ -1,3 +1,8 @@
+<?php
+include("../includes/valida.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -96,19 +101,18 @@
 
     <div class="main">
         <div class="form">
-            <form method="post" action="">
+            <form method="post" action="../includes/registrarEquip.php">
                 <input type="text" name="nome" id="nome" placeholder="Nome:" required>
-                
+                <input type="text" name="numero" id="numero" placeholder="Numero:" required>
                 <div class="celularDate">
-                    <input type="text" name="celular" id="celular" placeholder="Numero:" required>
-                    <input type="date" name="date" id="date" placeholder="Data:" required>
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF: " required>
+                    <input type="date" name="data" id="data" placeholder="Data:" required>
                 </div>
                 <div class="equipPro">
                     <input type="text" name="equip" id="equip" placeholder="Equipamento:" required>
                     <input type="text" name="problema" id="problema" placeholder="Problema Detectado:">
                 </div>
-
-               <button class="Btn">CADASTRAR</button>
+                <button input type="submit" class="Btn">CADASTRAR</button>
             </form>
         </div>
     </div>
