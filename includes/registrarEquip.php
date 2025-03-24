@@ -16,6 +16,4 @@ $stmt->execute();
 $stmt->close();
 $conn->close();
 
-header ("Location: ../pages/register.php");
-
-?>
+header("Location: ../pages/register.php");

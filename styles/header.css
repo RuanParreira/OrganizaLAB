@@ -1,0 +1,58 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #424242;
+  z-index: 3;
+  padding: 10px 0;
+}
+
+.header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  justify-content: space-between;
+}
+
+/*ABRIR SIDE BAR*/
+
+.open {
+  justify-content: space-between;
+}
+
+#open_btn {
+  position: absolute;
+  background-color: #5183f0;
+  color: #e3e9f7;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#open_btn_icon {
+  transition: transform 0.3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+  transform: rotate(180deg);
+}
+
+#sidebar.open-sidebar {
+  min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description {
+  width: 150px;
+  height: auto;
+}
+
+#sidebar.open-sidebar .side-item a {
+  justify-content: flex-start;
+  gap: 14px;
+}
