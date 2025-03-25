@@ -40,7 +40,7 @@ header {
 
 /*Botao login*/
 
-#btn-login {
+.btn-login {
     --color: #0077ff;
     font-family: inherit;
     display: inline-block;
@@ -57,7 +57,7 @@ header {
     position: relative;
 }
 
-#btn-login::before {
+.btn-login::before {
     position: absolute;
     content: "";
     background: var(--color);
@@ -67,17 +67,17 @@ header {
     border-radius: 50%;
 }
 
-#btn-login:hover {
+.btn-login:hover {
     color: white;
 }
 
-#btn-login:before {
+.btn-login:before {
     top: 100%;
     left: 100%;
     transition: 0.3s all;
 }
 
-#btn-login:hover::before {
+.btn-login:hover::before {
     top: -30px;
     left: -30px;
 }
@@ -94,11 +94,8 @@ header {
 
 
 @media screen and (max-width: 1170px) {
-    #nav_list {
-        display: none;
-    }
-
-    #btn-login {
+    #nav_list,
+    #navbar .btn-login {
         display: none;
     }
 
