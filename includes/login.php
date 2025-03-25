@@ -12,7 +12,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    header("Location: ../pages/home.html");
+    header("Location: ../pages/home.php");
 } else {
     echo "Usuário ou senha inválidos.";
 }

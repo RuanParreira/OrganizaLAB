@@ -12,73 +12,15 @@ include("../includes/valida.php");
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../styles/sidebar.css" />
+  <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/register.css" />
   <title>OrganizaLAB</title>
 </head>
 
 <body>
-  <aside>
-    <nav id="sidebar">
-      <div id="sidebar_content">
-        <div id="user">
-          <img src="../images/logo.png" id="user_avatar" alt="Avatar" />
-
-          <p id="user_infos">
-            <span class="item-description"> OrganizaLAB </span>
-            <span class="item-description"> Laboratorio de Info </span>
-          </p>
-        </div>
-
-        <ul id="side_items">
-          <li class="side-item">
-            <a href="home.html">
-              <i class="fa-solid fa-house"></i>
-              <span class="item-description"> Dashboard </span>
-            </a>
-          </li>
-
-          <li class="side-item active">
-            <a href="#">
-              <i class="fa-solid fa-user"></i>
-              <span class="item-description"> Cadastro </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="nStarted.html">
-              <i class="fa-solid fa-play"></i>
-              <span class="item-description"> Não começou </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="inProgress.html">
-              <i class="fa-solid fa-clock-rotate-left"></i>
-              <span class="item-description"> Em Andamento </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="done.html">
-              <i class="fa-solid fa-circle-check"></i>
-              <span class="item-description"> Prontos </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="finished.html">
-              <i class="fa-solid fa-thumbs-up"></i>
-              <span class="item-description"> Finalizados </span>
-            </a>
-          </li>
-        </ul>
-
-        <button id="open_btn">
-          <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-    </nav>
-  </aside>
+  <?php
+  include("../includes/menu.php");
+  ?>
 
   <div class="main">
     <div class="form">
