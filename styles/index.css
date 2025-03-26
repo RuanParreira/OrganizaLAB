@@ -5,8 +5,92 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color: white;
 }
 
 body {
     background-color: #1C1C1C;
+}
+
+
+main {
+    display: flex;
+    height: calc(100vh - 98px);
+    width: 100vw;
+}
+
+#inicio {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 8%;
+    align-items: center;
+    width: 100%;
+}
+
+#inicio-cont {
+    width: 550px;
+}
+
+#titulo-inicio-cont h2 {
+    font-size: 50px;
+    line-height: 1.1;
+}
+
+#titulo-inicio-cont span {
+    font-size: 50px;
+    line-height: 1.1;
+    color: blueviolet;
+}
+
+#description-inicio-cont p {
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+
+/* Botão Começar*/
+#button-inicio-cont button {
+    --color: black;
+    background-color: blueviolet;
+    font-family: inherit;
+    display: inline-block;
+    width: 6em;
+    height: 2em;
+
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+#button-inicio-cont button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+#button-inicio-cont button:hover {
+    color: #fff;
+}
+
+#button-inicio-cont button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+#button-inicio-cont button:hover:before {
+    top: -30px;
+    left: -30px;
 }

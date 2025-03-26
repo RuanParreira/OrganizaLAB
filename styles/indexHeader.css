@@ -1,0 +1,104 @@
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+
+}
+
+#titulo h1 {
+    font-size: 25px;
+}
+
+#titulo span {
+    font-size: 30px;
+    color: blueviolet;
+}
+
+#titulo img {
+    height: 50px;
+    border: 2px solid blueviolet;
+    border-radius: 2rem;
+    margin-right: 10px;
+}
+
+#header-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+#headder-botton {
+    display: flex;
+    align-items: center;
+}
+
+.header-menu-item {
+    cursor: pointer;
+    outline: none;
+}
+
+.header-menu-item:hover {
+    color: blueviolet;
+}
+
+
+
+/* Botão entrar */
+#header-botton button {
+    --color: black;
+    background-color: blueviolet;
+    font-family: inherit;
+    display: inline-block;
+    width: 5em;
+    height: 2em;
+
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+#header-botton button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+#header-botton button:hover {
+    color: #fff;
+}
+
+#header-botton button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+#header-botton button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+#header-botton button:active:before {
+    background: blueviolet;
+    transition: background 0s;
+}
