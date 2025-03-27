@@ -2,6 +2,9 @@
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
+
+<link rel="stylesheet" href="../styles/sidebar.css" />
+<link rel="stylesheet" href="../styles/header.css" />
 <header>
     <div class="container">
         <div class="starter">

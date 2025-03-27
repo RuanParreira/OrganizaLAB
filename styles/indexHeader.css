@@ -1,5 +1,5 @@
 header {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,8 +30,9 @@ header {
 
 #header-menu {
     display: flex;
-    align-items: center;
     gap: 25px;
+    text-decoration: none;
+    list-style: none;
     font-size: 17px;
     text-transform: uppercase;
 }
@@ -53,7 +54,7 @@ header {
 
 
 /* Botão entrar */
-#header-botton button {
+#header-botton {
     --color: black;
     background-color: blueviolet;
     font-family: inherit;
@@ -73,7 +74,7 @@ header {
     color: var(--color);
 }
 
-#header-botton button:before {
+#header-botton:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -83,22 +84,22 @@ header {
     border-radius: 50%;
 }
 
-#header-botton button:hover {
+#header-botton:hover {
     color: #fff;
 }
 
-#header-botton button:before {
+#header-botton:before {
     top: 100%;
     left: 100%;
     transition: all 0.7s;
 }
 
-#header-botton button:hover:before {
+#header-botton:hover:before {
     top: -30px;
     left: -30px;
 }
 
-#header-botton button:active:before {
+#header-botton:active:before {
     background: blueviolet;
     transition: background 0s;
 }
