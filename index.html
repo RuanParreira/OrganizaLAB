@@ -21,13 +21,13 @@
 
         <nav id="menu">
             <ul id="header-menu">
-                <li><a class="header-menu-item">inicio</a></li>
-                <li><a class="header-menu-item">sobre</a></li>
-                <li><a class="header-menu-item">contato</a></li>
+                <li><a class="header-menu-item" href="#hero">inicio</a></li>
+                <li><a class="header-menu-item" href="#sobre">sobre</a></li>
+                <li><a class="header-menu-item" href="#form">contato</a></li>
             </ul>
         </nav>
 
-        <button id="header-botton">
+        <button id="header-botton" onclick="window.location.href='pages/login.php'">
             Entrar
         </button>
     </header>
@@ -71,20 +71,22 @@
         </section>
 
         <section id="form">
-            <h5>Fale conosco</h5>
+            <h6>Fale <span>conosco!</span></h6>
             <form id="form-cont" action="" method="post">
-                <h6>Entre em contato</h6>
+                <h5>Mande um <span>E-MAIL</span></h5>
                 <input type="text" name="nome" id="nome" placeholder="NOME:" required>
                 <input type="email" name="email" id="email" placeholder="E-MAIL:" required>
                 <textarea name="mensagem" id="mensagem" placeholder="MENSAGEM:"></textarea>
                 <button>ENVIAR</button>
-                </div>
         </section>
     </main>
 
     <footer>
         <p>Feito por Ruan Parreira</p>
     </footer>
+
+    <script src="scripts/index.js"></script>
+
 </body>
 
 </html>

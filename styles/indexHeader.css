@@ -3,8 +3,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 8%;
+    padding: 15px 8%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
 }
+
+header.scrolled {
+    background-color: rgb(15, 1, 28);
+    transition: background-color 0.3s ease;
+}
+
 
 #titulo {
     display: flex;
@@ -55,11 +64,11 @@ header {
 
 /* Botão entrar */
 #header-botton {
-    --color: black;
+    --color: white;
     background-color: blueviolet;
     font-family: inherit;
     display: inline-block;
-    width: 5em;
+    width: 6em;
     height: 2em;
 
     position: relative;
@@ -85,7 +94,7 @@ header {
 }
 
 #header-botton:hover {
-    color: #fff;
+    color: black;
 }
 
 #header-botton:before {
@@ -97,9 +106,4 @@ header {
 #header-botton:hover:before {
     top: -30px;
     left: -30px;
-}
-
-#header-botton:active:before {
-    background: blueviolet;
-    transition: background 0s;
 }

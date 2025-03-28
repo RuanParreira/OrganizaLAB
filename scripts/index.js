@@ -1,6 +1,9 @@
-$(document).ready(function () {
-    $('#mobile_btn').on('click', function () {
-        $('#mobile-menu').toggleClass('active');
-        $('#mobile_btn').find('i').toggleClass('fa-x');
-    });
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // Ajuste o valor conforme necessário
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
 });
