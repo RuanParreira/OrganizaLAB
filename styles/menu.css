@@ -11,17 +11,6 @@ body {
     background-color: #1C1C1C;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-
-}
-
-
 /*header*/
 
 header {
@@ -101,7 +90,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: #424242;
-    position: absolute;
+    position: fixed;
     transition: min-width 0.3s ease;
     bottom: 0;
     left: 0;

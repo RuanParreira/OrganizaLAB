@@ -21,8 +21,11 @@ include("../includes/conexao.php");
     <main>
         <h1>Equipamentos Concluídos</h1>
         <?php
-        $sql = "SELECT id, nome, equip, problema FROM equipamentos WHERE status = 2"; // Busca equipamentos com status 2
-        $result = $conn->query($sql);
+        $sql = "SELECT id, nome, equip, problema FROM equipamentos WHERE status = 2 AND id_usuario = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id_usuario);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
             echo "<table border='1'>";

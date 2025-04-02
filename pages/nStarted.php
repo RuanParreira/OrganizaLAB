@@ -1,8 +1,6 @@
 <?php
 include("../includes/valida.php");
 include("../includes/conexao.php");
-
-
 ?>
 
 <!DOCTYPE html>
@@ -21,31 +19,33 @@ include("../includes/conexao.php");
     ?>
 
     <main>
-        <?php
-        $sql = "SELECT id, nome, equip, problema FROM equipamentos WHERE status = 0"; // Inclua o campo 'id' para identificar cada equipamento
-        $result = $conn->query($sql);
+        <h1>Equipamentos Não Iniciados</h1>
+        <div class="cards">
+            <?php
+            $sql = "SELECT id, nome, equip, problema, data FROM equipamentos WHERE status = 0 AND id_usuario = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("i", $id_usuario);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-        if ($result->num_rows > 0) {
-            echo "<table>";
-            echo "<tr><th>Nome</th><th>Equipamento</th><th>Problema Detectado</th><th>Ação</th></tr>";
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['equip']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['problema']) . "</td>";
-                echo "<td>";
-                echo "<form method='POST' action='../includes/nStarted.php' style='display:inline;'>";
-                echo "<input type='hidden' name='id' value='" . htmlspecialchars($row['id']) . "'>";
-                echo "<button type='submit'>Começar</button>";
-                echo "</form>";
-                echo "</td>";
-                echo "</tr>";
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class='card'>";
+                    echo "<h2>" . htmlspecialchars($row['nome']) . "</h2>";
+                    echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equip']) . "</p>";
+                    echo "<p><strong>Problema:</strong> " . htmlspecialchars($row['problema']) . "</p>";
+                    echo "<p><strong>Data:</strong> " . htmlspecialchars($row['data']) . "</p>";
+                    echo "<form method='POST' action='../includes/nStarted.php'>";
+                    echo "<input type='hidden' name='id' value='" . htmlspecialchars($row['id']) . "'>";
+                    echo "<button type='submit'>Começar</button>";
+                    echo "</form>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p>Nenhum equipamento com status 0 encontrado.</p>";
             }
-            echo "</table>";
-        } else {
-            echo "<p>Nenhum equipamento com status 0 encontrado.</p>";
-        }
-        ?>
+            ?>
+        </div>
     </main>
 </body>
 

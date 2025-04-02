@@ -1,0 +1,45 @@
+main {
+    min-height: calc(100vh - 56px);
+    margin-top: 56px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cards {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    background-color: white;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}

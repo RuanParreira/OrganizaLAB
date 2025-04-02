@@ -20,8 +20,11 @@ include("../includes/conexao.php");
 
     <main>
         <?php
-        $sql = "SELECT id, nome, equip, problema FROM equipamentos WHERE status = 1"; // Busca equipamentos com status 1
-        $result = $conn->query($sql);
+        $sql = "SELECT id, nome, equip, problema FROM equipamentos WHERE status = 1 AND id_usuario = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id_usuario);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
             echo "<table>";
