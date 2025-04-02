@@ -20,25 +20,21 @@ include("../includes/valida.php");
   include("../includes/menu.php");
   ?>
 
-  <div class="main">
-    <div class="form">
-      <form method="post" action="../includes/registrarEquip.php">
-        <input type="text" name="nome" id="nome" placeholder="Nome:" required />
-        <input type="text" name="numero" id="numero" placeholder="Numero:" required />
-        <div class="celularDate">
-          <input type="text" name="cpf" id="cpf" placeholder="CPF: " required />
-          <input type="date" name="data" id="data" placeholder="Data:" required />
-        </div>
-        <div class="equipPro">
-          <input type="text" name="equip" id="equip" placeholder="Equipamento:" required />
-          <input type="text" name="problema" id="problema" placeholder="Problema Detectado:" />
-        </div>
-        <button input type="submit" class="Btn">CADASTRAR</button>
-      </form>
-    </div>
-  </div>
-
-  <script src="../scripts/sidebar.js"></script>
+  <main>
+    <form method="post" action="../includes/registrarEquip.php">
+      <input type="text" name="nome" id="nome" placeholder="Nome:" required />
+      <input type="text" name="numero" id="numero" placeholder="Numero:" required />
+      <div class="celularDate">
+        <input type="text" name="cpf" id="cpf" placeholder="CPF: " required />
+        <input type="date" name="data" id="data" placeholder="Data:" required />
+      </div>
+      <div class="equipPro">
+        <input type="text" name="equip" id="equip" placeholder="Equipamento:" required />
+        <input type="text" name="problema" id="problema" placeholder="Problema Detectado:" />
+      </div>
+      <button input type="submit" class="Btn">CADASTRAR</button>
+    </form>
+  </main>
 </body>
 
 </html>

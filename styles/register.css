@@ -1,15 +1,15 @@
-.form {
+form {
   background-color: #424242;
-  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 10px 30px -10px black;
-  max-width: 600px;
   margin: auto;
+  padding: 20px;
+  width: 600px;
 }
 
-.form input[type="text"],
-.form input[type="date"],
-.form textarea {
+form input[type="text"],
+form input[type="date"],
+form textarea {
   background-color: #4f4f4f;
   width: 100%;
   padding: 10px;
@@ -21,11 +21,11 @@
   outline: none;
 }
 
-.form input[type="text"]::placeholder {
+form input[type="text"]::placeholder {
   color: white;
 }
 
-.form input[type="submit"] {
+form input[type="submit"] {
   background-color: #345eb8;
   color: white;
   padding: 15px 20px;
@@ -37,11 +37,11 @@
   font-size: 16px;
 }
 
-.form input[type="submit"]:hover {
+form input[type="submit"]:hover {
   background-color: #000000;
 }
 
-.form textarea {
+form textarea {
   height: 100px;
   resize: vertical;
 }
