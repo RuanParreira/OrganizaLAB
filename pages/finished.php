@@ -9,7 +9,7 @@ include("../includes/conexao.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/nStarted.css">
+    <link rel="stylesheet" href="../styles/finished.css">
     <title>Equipamentos Finalizados</title>
 </head>
 
@@ -19,7 +19,6 @@ include("../includes/conexao.php");
     ?>
 
     <main>
-        <h1>Equipamentos Finalizados</h1>
         <?php
         $sql = "SELECT id, nome, equip, problema FROM equipamentos WHERE status = 3 AND id_usuario = ?";
         $stmt = $conn->prepare($sql);

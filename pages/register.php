@@ -32,7 +32,7 @@ include("../includes/valida.php");
         <input type="text" name="equip" id="equip" placeholder="Equipamento:" required />
         <input type="text" name="problema" id="problema" placeholder="Problema Detectado:" />
       </div>
-      <button input type="submit" class="Btn">CADASTRAR</button>
+      <button input type="submit" id="Btn">CADASTRAR</button>
     </form>
   </main>
 </body>

@@ -42,16 +42,17 @@ include("../includes/conexao.php");
   ?>
 
   <main>
-    <div class="cards">
+    <div id="cards">
       <div class="card">
         <h2>Não Iniciados</h2>
         <?php
         if ($result0->num_rows > 0) {
           while ($row = $result0->fetch_assoc()) {
+            echo "<div class='equipamento'>";
             echo "<p><strong>Nome:</strong> " . htmlspecialchars($row['nome']) . "</p>";
             echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equip']) . "</p>";
             echo "<p><strong>Data:</strong> " . htmlspecialchars($row['data']) . "</p>";
-            echo "<hr>";
+            echo "</div>";
           }
         } else {
           echo "<p>Nenhum equipamento encontrado.</p>";
@@ -61,19 +62,22 @@ include("../includes/conexao.php");
 
       <!-- Card para status 1 -->
       <div class="card">
+
         <h2>Em Progresso</h2>
         <?php
         if ($result1->num_rows > 0) {
           while ($row = $result1->fetch_assoc()) {
+            echo "<div class='equipamento'>";
             echo "<p><strong>Nome:</strong> " . htmlspecialchars($row['nome']) . "</p>";
             echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equip']) . "</p>";
             echo "<p><strong>Data:</strong> " . htmlspecialchars($row['data']) . "</p>";
-            echo "<hr>";
+            echo "</div>";
           }
         } else {
           echo "<p>Nenhum equipamento encontrado.</p>";
         }
         ?>
+
       </div>
 
       <!-- Card para status 2 -->
@@ -82,10 +86,11 @@ include("../includes/conexao.php");
         <?php
         if ($result2->num_rows > 0) {
           while ($row = $result2->fetch_assoc()) {
+            echo "<div class='equipamento'>";
             echo "<p><strong>Nome:</strong> " . htmlspecialchars($row['nome']) . "</p>";
             echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equip']) . "</p>";
             echo "<p><strong>Data:</strong> " . htmlspecialchars($row['data']) . "</p>";
-            echo "<hr>";
+            echo "</div>";
           }
         } else {
           echo "<p>Nenhum equipamento encontrado.</p>";

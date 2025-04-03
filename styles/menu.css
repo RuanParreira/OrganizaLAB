@@ -33,6 +33,10 @@ header {
     gap: 25px;
 }
 
+.starter span {
+    color: blueviolet;
+}
+
 /*sair*/
 
 #sair {

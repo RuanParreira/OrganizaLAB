@@ -13,7 +13,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <button id="open_btn">
             <i class="fa-solid fa-bars"></i>
         </button>
-        <h1>OrganizaLAB</h1>
+        <h1>Organiza<span>LAB<span></h1>
     </div>
     <button id="sair" onclick="window.location.href='../includes/sair.php'">
         SAIR

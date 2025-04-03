@@ -1,0 +1,32 @@
+main {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 56px);
+    width: calc(100vw - 68px);
+    margin-left: 68px;
+    margin-top: 56px;
+}
+
+table {
+    border: 1px solid white;
+    background-color: aliceblue;
+    border-collapse: collapse;
+    height: 30px;
+}
+
+table th,
+table td {
+    padding: 5px;
+    /* Reduz o espaçamento interno das células */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    border: 1px solid black;
+    /* Adiciona bordas finas às células */
+}
+
+table th {
+    background-color: #424242;
+    /* Cor de fundo para o cabeçalho */
+    color: white;
+    /* Cor do texto do cabeçalho */
+}
