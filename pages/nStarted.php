@@ -19,7 +19,7 @@ include("../includes/conexao.php");
     ?>
 
     <main>
-        <h1>Equipamentos Não Iniciados</h1>
+        <h1>Serviços <span>Não Iniciados<span></h1>
         <div class="cards">
             <?php
             $sql = "SELECT id, nome, equip, problema, data FROM equipamentos WHERE status = 0 AND id_usuario = ?";
@@ -32,11 +32,13 @@ include("../includes/conexao.php");
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
                     echo "<h2>" . htmlspecialchars($row['nome']) . "</h2>";
+                    echo "<div class='card-fundo'>";
                     echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equip']) . "</p>";
                     echo "<p><strong>Problema:</strong> " . htmlspecialchars($row['problema']) . "</p>";
                     echo "<p><strong>Data:</strong> " . htmlspecialchars($row['data']) . "</p>";
                     echo "<form method='POST' action='../includes/nStarted.php'>";
                     echo "<input type='hidden' name='id' value='" . htmlspecialchars($row['id']) . "'>";
+                    echo "</div>";
                     echo "<button type='submit'>Começar</button>";
                     echo "</form>";
                     echo "</div>";

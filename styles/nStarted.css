@@ -1,65 +1,99 @@
-* {
-    outline: 1px red solid;
-}
-
 main {
     display: flex;
-    justify-content: center;
-    height: calc(100vh - 56px);
-    margin-left: 68px;
-    margin-top: 56px;
-    align-items: center;
     flex-direction: column;
-    padding: 20px;
+    height: calc(100% - 56px);
+    margin-top: 56px;
+    margin-left: 12rem;
 }
 
 main h1 {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 1rem;
     color: whitesmoke;
+    text-transform: uppercase;
+}
+
+main span {
+    color: blueviolet;
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #424242;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px -10px black;
     padding: 20px;
     width: 300px;
     text-align: left;
+    color: white;
+}
+
+.card-fundo {
+    background-color: #4f4f4f;
+    border-radius: .5rem;
+    padding: .5rem;
 }
 
 .card h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #333;
+    color: rgb(170, 106, 230);
 }
 
-.card p {
-    font-size: 1em;
-    margin: 5px 0;
-    color: #555;
-}
+
+
+/*botao*/
 
 .card button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    --color: white;
+    background-color: blueviolet;
+    font-family: inherit;
+    display: inline-block;
+    width: 100%;
+    height: 2em;
+    position: relative;
     cursor: pointer;
-    font-size: 1em;
+    overflow: hidden;
+    border: none;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color);
+    border-radius: 10px;
+    margin-top: .5rem;
+}
+
+.card button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 400px;
+    width: 800px;
+    border-radius: 50%;
 }
 
 .card button:hover {
-    background-color: #45a049;
+    color: black;
+}
+
+.card button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.card button:hover:before {
+    top: -80px;
+    left: -100px;
 }

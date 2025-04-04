@@ -11,6 +11,10 @@ body {
     background-color: #1C1C1C;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 /*header*/
 
 header {
@@ -18,8 +22,8 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 56px;
-    padding: 0 2%;
+    height: 5.6rem;
+    padding: 0 3.5rem;
     background-color: #424242;
     color: white;
     position: fixed;
@@ -30,10 +34,15 @@ header {
 .starter {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 2.5rem;
+}
+
+.starter h1 {
+    font-size: 3rem;
 }
 
 .starter span {
+    font-size: 3rem;
     color: blueviolet;
 }
 
@@ -46,15 +55,14 @@ header {
     display: inline-block;
     width: 6em;
     height: 2em;
-
     position: relative;
     cursor: pointer;
     overflow: hidden;
     border: none;
     transition: color 0.5s;
     z-index: 1;
-    font-size: 17px;
-    border-radius: 6px;
+    font-size: 1.7rem;
+    border-radius: 0.6rem;
     font-weight: 500;
     color: var(--color);
 }
@@ -64,8 +72,8 @@ header {
     position: absolute;
     z-index: -1;
     background: var(--color);
-    height: 150px;
-    width: 200px;
+    height: 15rem;
+    width: 20rem;
     border-radius: 50%;
 }
 
@@ -80,8 +88,8 @@ header {
 }
 
 #sair:hover:before {
-    top: -30px;
-    left: -30px;
+    top: -3rem;
+    left: -3rem;
 }
 
 /*header*/
@@ -90,7 +98,8 @@ header {
 /*side bar*/
 
 #sidebar {
-    height: calc(100vh - 56px);
+    height: calc(100vh - 5.6rem);
+    margin-top: 5.6rem;
     display: flex;
     flex-direction: column;
     background-color: #424242;
@@ -103,26 +112,28 @@ header {
 #side_items {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.8rem;
     list-style: none;
+    font-size: 2rem;
 }
 
 .side-item {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 14px;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 1.4rem;
     cursor: pointer;
+    margin-left: 2rem;
 }
 
 .side-item.active {
     background-color: #1C1C1C;
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 
 .side-item:hover:not(.active),
 #logout_btn:hover {
     background-color: #1C1C1C;
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 
 .side-item a {
@@ -141,18 +152,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
 }
 
 .item-description {
-    width: 0px;
+    width: 0rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 14px;
-    transition: width .6s;
-    height: 0px;
+    font-size: 1.4rem;
+    transition: width 0.6s;
+    height: 0rem;
 }
 
 /*ABRIR SIDE BAR*/
@@ -162,18 +173,16 @@ header {
 }
 
 #open_btn {
-
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     border: none;
     cursor: pointer;
     color: white;
     background-color: transparent;
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     outline: none;
 }
-
 
 #open_btn_icon {
     transition: transform 0.3s ease;
@@ -188,7 +197,7 @@ header {
 }
 
 #sidebar.open-sidebar .item-description {
-    width: 150px;
+    width: 15rem;
     height: auto;
     transition: width 0.3s ease;
     /* Reduza o tempo da transição */
@@ -196,5 +205,5 @@ header {
 
 #sidebar.open-sidebar .side-item a {
     justify-content: flex-start;
-    gap: 14px;
+    gap: 1.4rem;
 }
