@@ -26,7 +26,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <li class="side-item <?php echo $current_page == 'home.php' ? 'active' : ''; ?>">
                 <a href="../pages/home.php">
                     <i class="fa-solid fa-house"></i>
-                    <span class="item-description"> Dashboard </span>
+                    <span class="item-description"> Inicio </span>
                 </a>
             </li>
 

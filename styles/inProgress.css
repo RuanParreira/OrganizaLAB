@@ -1,125 +1,241 @@
 main {
+    margin-left: 16rem;
+    margin-top: 5.6rem;
     display: flex;
     justify-content: center;
-    min-height: calc(100vh - 56px);
-    margin-top: 56px;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 68px;
-    padding: 20px;
+    flex-wrap: wrap;
 }
 
 main h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 1rem;
     color: whitesmoke;
 }
 
-p {
-    color: white;
+main span {
+    color: blueviolet;
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2rem;
     justify-content: flex-start;
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
+    background-color: #424242;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 30rem;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* Organiza os elementos verticalmente */
+}
+
+.infoFundo {
+    background-color: #4f4f4f;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.card .observacao-container {
+    margin-top: auto;
+    /* Empurra o bloco de observações para o final */
 }
 
 .card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: rgb(170, 106, 230);
 }
 
 .card p {
-    font-size: 1em;
-    margin: 5px 0;
-    color: #555;
-}
-
-.card button {
-    background-color: #4CAF50;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.card button:hover {
-    background-color: #45a049;
 }
 
 .card textarea {
     width: 100%;
-    height: 80px;
+    height: 8rem;
     resize: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 1em;
-    color: #555;
-    background-color: #f9f9f9;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #4f4f4f;
+    box-shadow: inset 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
     cursor: auto;
     outline: none;
-
+    margin-top: 0.5rem;
+    /* Espaçamento entre o texto e o textarea */
 }
 
+.observacao-container p {
+    text-transform: uppercase;
+    color: rgb(170, 106, 230);
+}
 
 #botoes {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+    /* Alinha os botões à direita */
 }
+
+
+/*Botoes Default*/
+
+.card button {
+    --color: white;
+    background-color: blueviolet;
+    font-family: inherit;
+    display: inline-block;
+    width: 12rem;
+    height: 4.5rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color);
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+}
+
+.card button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 40rem;
+    width: 80rem;
+    border-radius: 50%;
+}
+
+.card button:hover {
+    color: black;
+}
+
+.card button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.card button:hover:before {
+    top: -8rem;
+    left: -10rem;
+}
+
+
+/*Botoes Default*/
+
 
 /* Editar */
 .modal {
     display: none;
-    /* Esconde o modal por padrão */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    border-radius: 8px;
+    background-color: #424242;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 40rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+    color: blueviolet;
+    text-align: center;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: whitesmoke;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #4f4f4f;
+    color: white;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+}
+
+.modal-content button {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #5a2ea6;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.4rem;
+    color: white;
     cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover {
+    color: red;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

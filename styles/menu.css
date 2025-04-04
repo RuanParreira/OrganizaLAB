@@ -98,15 +98,16 @@ header {
 /*side bar*/
 
 #sidebar {
+    position: fixed;
+    top: 5.6rem;
+    left: 0;
     height: calc(100vh - 5.6rem);
-    margin-top: 5.6rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #424242;
-    position: fixed;
     transition: min-width 0.3s ease;
-    bottom: 0;
-    left: 0;
+    min-width: 6.8rem;
 }
 
 #side_items {
@@ -142,6 +143,7 @@ header {
     align-items: center;
     justify-content: center;
     color: white;
+    gap: 1.4rem;
 }
 
 .side-item.active a {
@@ -200,7 +202,6 @@ header {
     width: 15rem;
     height: auto;
     transition: width 0.3s ease;
-    /* Reduza o tempo da transição */
 }
 
 #sidebar.open-sidebar .side-item a {

@@ -19,7 +19,7 @@ include("../includes/conexao.php");
     ?>
 
     <main>
-        <h1>Equipamentos em Progresso</h1>
+        <h1>Equipamentos <span>em Progresso</span></h1>
         <div class="cards">
             <?php
             $sql = "SELECT id, nome, equip, problema, data, obs, numero FROM equipamentos WHERE status = 1 AND id_usuario = ?";
@@ -32,11 +32,15 @@ include("../includes/conexao.php");
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
                     echo "<h2>" . htmlspecialchars($row['nome']) . " - " . htmlspecialchars($row['numero']) . "</h2>";
+                    echo "<div class='infoFundo'>";
                     echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equip']) . "</p>";
                     echo "<p><strong>Problema:</strong> " . htmlspecialchars($row['problema']) . "</p>";
                     echo "<p><strong>Data:</strong> " . htmlspecialchars($row['data']) . "</p>";
+                    echo "</div>";
+                    echo "<div class='observacao-container'>";
                     echo "<p><strong>Observações:</strong></p>";
                     echo "<textarea readonly>" . htmlspecialchars($row['obs']) . "</textarea>";
+                    echo "</div>";
                     echo "<div id='botoes'>"; // Contêiner flex para os botões
                     echo "<form method='POST' action='../includes/inProgress.php' style='margin: 0;'>";
                     echo "<input type='hidden' name='id' value='" . htmlspecialchars($row['id']) . "'>";
