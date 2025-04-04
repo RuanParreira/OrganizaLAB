@@ -108,6 +108,7 @@ header {
     background-color: #424242;
     transition: min-width 0.3s ease;
     min-width: 6.8rem;
+    z-index: 100;
 }
 
 #side_items {

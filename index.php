@@ -55,8 +55,8 @@
                     <span>gestão de clientes.</span>
                     <hr><br>
                 </p>
-                <h4><span id="sobre-contB"> Benefícios</span> Do WebSite: </h4>
-                <ul>
+                <h4><span> Benefícios</span> Do WebSite: </h4>
+                <ul id="beneficios">
                     <li>Gerenciamento de Ordens de Serviço</li>
                     <li>Cadastro de Clientes e Equipamentos</li>
                     <li>Controle de Status dos

@@ -1,12 +1,17 @@
+html {
+    font-size: 62.5%;
+}
+
 header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8%;
+    padding: 1.5rem 8%;
     position: fixed;
     z-index: 1000;
     top: 0;
+    height: 8rem;
 }
 
 header.scrolled {
@@ -14,35 +19,33 @@ header.scrolled {
     transition: background-color 0.3s ease;
 }
 
-
 #titulo {
     display: flex;
     align-items: center;
-
 }
 
 #titulo h1 {
-    font-size: 25px;
+    font-size: 3rem;
 }
 
 #titulo span {
-    font-size: 30px;
+    font-size: 3.5rem;
     color: blueviolet;
 }
 
 #titulo img {
-    height: 50px;
-    border: 2px solid blueviolet;
+    height: 5rem;
+    border: 0.2rem solid blueviolet;
     border-radius: 2rem;
-    margin-right: 10px;
+    margin-right: 1rem;
 }
 
 #header-menu {
     display: flex;
-    gap: 25px;
+    gap: 2.5rem;
     text-decoration: none;
     list-style: none;
-    font-size: 17px;
+    font-size: 1.7rem;
     text-transform: uppercase;
 }
 
@@ -60,16 +63,14 @@ header.scrolled {
     color: blueviolet;
 }
 
-
-
 /* Botão entrar */
 #header-botton {
     --color: white;
     background-color: blueviolet;
     font-family: inherit;
     display: inline-block;
-    width: 6em;
-    height: 2em;
+    width: 10rem;
+    height: 3.5rem;
 
     position: relative;
     cursor: pointer;
@@ -77,8 +78,8 @@ header.scrolled {
     border: none;
     transition: color 0.5s;
     z-index: 1;
-    font-size: 17px;
-    border-radius: 6px;
+    font-size: 1.7rem;
+    border-radius: 0.6rem;
     font-weight: 500;
     color: var(--color);
 }
@@ -88,8 +89,8 @@ header.scrolled {
     position: absolute;
     z-index: -1;
     background: var(--color);
-    height: 150px;
-    width: 200px;
+    height: 15rem;
+    width: 20rem;
     border-radius: 50%;
 }
 
@@ -104,6 +105,6 @@ header.scrolled {
 }
 
 #header-botton:hover:before {
-    top: -30px;
-    left: -30px;
+    top: -3rem;
+    left: -3rem;
 }

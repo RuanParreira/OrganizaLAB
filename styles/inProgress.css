@@ -2,6 +2,7 @@ main {
     margin-left: 16rem;
     margin-top: 5.6rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -17,6 +18,8 @@ main h1 {
 main span {
     color: blueviolet;
 }
+
+/*Cards*/
 
 .cards {
     display: flex;
@@ -34,7 +37,6 @@ main span {
     text-align: left;
     display: flex;
     flex-direction: column;
-    /* Organiza os elementos verticalmente */
 }
 
 .infoFundo {
@@ -45,13 +47,24 @@ main span {
 
 .card .observacao-container {
     margin-top: auto;
-    /* Empurra o bloco de observações para o final */
 }
 
-.card h2 {
+.card-header h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
     color: rgb(170, 106, 230);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.card-header h3 {
+    font-size: 2rem;
+    color: rgb(170, 106, 230);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .card p {
@@ -86,9 +99,21 @@ main span {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-    justify-content: flex-end;
+    justify-content: center;
     /* Alinha os botões à direita */
 }
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    height: 8rem;
+    width: 100%;
+}
+
+
+/*Cards*/
 
 
 /*Botoes Default*/
@@ -138,7 +163,6 @@ main span {
     left: -10rem;
 }
 
-
 /*Botoes Default*/
 
 
@@ -150,20 +174,37 @@ main span {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out;
+    /* Transição suave para visibilidade */
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+    /* Torna visível */
 }
 
 .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    /* Inicialmente menor */
     background-color: #424242;
     color: white;
     padding: 2rem;
     border-radius: 1rem;
     width: 40rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-    position: relative;
-    animation: fadeIn 0.3s ease-in-out;
-    margin: 0 auto;
+    animation: fadeIn 0.3s ease-in-out forwards;
+    /* Animação suave */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .modal-content h2 {
@@ -231,11 +272,13 @@ main span {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0.9);
+        transform: translate(-50%, -50%) scale(0.9);
+        /* Começa menor e invisível */
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        /* Fica visível e no tamanho normal */
     }
 }

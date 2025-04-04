@@ -7,16 +7,17 @@
     box-sizing: border-box;
     text-decoration: none;
     color: white;
+
 }
 
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
     background-color: #1C1C1C;
 }
-
 
 main {
     display: flex;
@@ -28,49 +29,47 @@ main {
 #hero {
     display: flex;
     justify-content: space-between;
-    padding: 1px 8%;
+    padding: 0.1rem 8%;
     align-items: center;
     width: 100%;
-    height: 100vh;
-}
-
-#hero-cont {
-    width: 550px;
+    height: calc(100vh - 8rem);
+    margin-top: 8rem;
+    scroll-margin-top: 8rem;
+    gap: 25rem;
 }
 
 #hero-cont h2 {
-    font-size: 50px;
+    font-size: 5rem;
     line-height: 1.1;
 }
 
 #hero-cont span {
-    font-size: 50px;
+    font-size: 5rem;
     line-height: 1.1;
     color: blueviolet;
 }
 
 #hero-cont p {
-    font-size: 25px;
-    padding: 10px 0;
+    font-size: 2.5rem;
+    padding: 1rem 0;
 }
 
-
-/* Botão Começar da Hero*/
+/* Botão Começar da Hero */
 #hero-cont button {
     --color: white;
     background-color: blueviolet;
     font-family: inherit;
     display: inline-block;
-    width: 7em;
-    height: 2em;
+    width: 12rem;
+    height: 3.5rem;
     position: relative;
     cursor: pointer;
     overflow: hidden;
     border: none;
     transition: color 0.5s;
     z-index: 1;
-    font-size: 20px;
-    border-radius: 6px;
+    font-size: 2rem;
+    border-radius: 0.6rem;
     font-weight: 500;
     color: var(--color);
 }
@@ -80,8 +79,8 @@ main {
     position: absolute;
     z-index: -1;
     background: var(--color);
-    height: 150px;
-    width: 200px;
+    height: 15rem;
+    width: 20rem;
     border-radius: 50%;
 }
 
@@ -96,45 +95,48 @@ main {
 }
 
 #hero-cont button:hover:before {
-    top: -30px;
-    left: -30px;
+    top: -3rem;
+    left: -3rem;
 }
 
 /*Sobre*/
 
 #sobre {
     display: flex;
-    padding: 0px 8%;
+    padding: 0 8%;
     height: 85vh;
     align-items: center;
     justify-content: space-between;
-
+    gap: 20rem;
 }
 
 #sobre-cont {
-    width: 650px;
+    width: 65rem;
 }
 
 #sobre-cont h3 {
-    font-size: 50px;
+    font-size: 5rem;
     line-height: 1.1;
 }
 
+#sobre-cont p {
+    font-size: 1.6rem;
+}
 
 #sobre-cont span {
     color: rgb(170, 106, 230);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.6rem;
 }
 
 #sobre-cont #titulo-sobre-cont {
     color: blueviolet;
-    font-size: 50px;
+    font-size: 5rem;
 }
 
-
-#sobre-cont h4 {
-    font-size: 20px;
+#sobre-cont h4,
+#sobre-cont h4 span {
+    font-size: 3rem;
 }
 
 #sobre-cont ul {
@@ -145,21 +147,30 @@ main {
 }
 
 #sobre-cont li::before {
-    font-size: 20px;
+    font-size: 2rem;
     content: "• ";
     color: rgb(170, 106, 230);
 }
 
+#sobre-cont hr {
+    border: 1px solid blueviolet;
+}
+
+#beneficios li {
+    font-size: 1.6rem;
+}
+
+
 /*FORMULARIO*/
 
 #form {
-    padding: 0px 8%;
-    margin-bottom: 80px;
+    padding: 0 8%;
+    margin-bottom: 8rem;
 }
 
 #form h6 {
-    font-size: 50px;
-    padding: 20px;
+    font-size: 5rem;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -169,10 +180,10 @@ main {
 
 #form-cont {
     background-color: #424242;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px -10px black;
-    max-width: 600px;
+    padding: 3rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 1rem 3rem -1rem black;
+    max-width: 60rem;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -185,10 +196,10 @@ main {
 #form-cont textarea {
     background-color: #4f4f4f;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 3px transparent;
-    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 0.3rem transparent;
+    border-radius: 0.5rem;
     box-sizing: border-box;
     color: white;
     outline: none;
@@ -201,20 +212,18 @@ main {
 }
 
 #form-cont textarea {
-    height: 100px;
-    resize: vertical;
+    height: 10rem;
     resize: none;
 }
 
 #form-cont h5 {
     text-align: center;
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 #form-cont span {
     color: rgb(170, 106, 230);
 }
-
 
 /*Botao Formulario*/
 #form-cont button {
@@ -223,18 +232,18 @@ main {
     font-family: inherit;
     display: inline-block;
     width: 100%;
-    height: 2.5em;
+    height: 4.5rem;
     position: relative;
     cursor: pointer;
     overflow: hidden;
     border: none;
     transition: color 0.5s;
     z-index: 1;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 500;
     color: var(--color);
-    border-radius: 10px;
-    margin-top: .5rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
 }
 
 #form-cont button:before {
@@ -242,8 +251,8 @@ main {
     position: absolute;
     z-index: -1;
     background: var(--color);
-    height: 400px;
-    width: 800px;
+    height: 40rem;
+    width: 80rem;
     border-radius: 50%;
 }
 
@@ -258,14 +267,15 @@ main {
 }
 
 #form-cont button:hover:before {
-    top: -80px;
-    left: -100px;
+    top: -8rem;
+    left: -10rem;
 }
 
 /* Footer */
 
 footer {
+    font-size: 1.6rem;
     text-align: center;
-    padding: 15px;
+    padding: 1.5rem;
     background-color: rgb(15, 1, 28);
 }

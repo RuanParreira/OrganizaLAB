@@ -31,7 +31,10 @@ include("../includes/conexao.php");
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
-                    echo "<h2>" . htmlspecialchars($row['nome']) . " - " . htmlspecialchars($row['numero']) . "</h2>";
+                    echo "<div class='card-header'>";
+                    echo "<h2>" . htmlspecialchars($row['nome']) . "</h2>";
+                    echo "<h3>" . htmlspecialchars($row['numero']) . "</h3>";
+                    echo "</div>";
                     echo "<div class='infoFundo'>";
                     echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equip']) . "</p>";
                     echo "<p><strong>Problema:</strong> " . htmlspecialchars($row['problema']) . "</p>";
