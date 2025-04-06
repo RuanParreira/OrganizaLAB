@@ -196,7 +196,7 @@ header {
 }
 
 #sidebar.open-sidebar {
-    min-width: 15%;
+    min-width: 10%;
 }
 
 #sidebar.open-sidebar .item-description {

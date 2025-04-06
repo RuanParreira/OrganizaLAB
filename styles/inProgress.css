@@ -1,9 +1,12 @@
 main {
-    margin-left: 16rem;
+    margin-left: 8rem;
     margin-top: 5.6rem;
+    height: calc(100% - 5.6rem);
+    width: calc(100% - 8rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -17,6 +20,13 @@ main h1 {
 
 main span {
     color: blueviolet;
+}
+
+main p {
+    margin-top: 30rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
 }
 
 /*Cards*/

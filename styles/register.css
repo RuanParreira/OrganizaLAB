@@ -2,7 +2,7 @@ main {
   display: flex;
   justify-content: center;
   min-height: calc(100vh - 5.6rem);
-  margin-left: 6.8rem;
+  margin-left: 8rem;
   margin-top: 5.6rem;
 }
 

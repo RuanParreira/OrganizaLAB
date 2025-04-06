@@ -2,7 +2,7 @@
 include("conexao.php");
 session_start();
 
-$id_usuario = $_SESSION['user_id']; // Obtém o ID do usuário logado
+$id_usuario = $_SESSION['user_id'];
 $_nome = $_POST["nome"];
 $_numero = $_POST["numero"];
 $_cpf = $_POST["cpf"];

@@ -15,7 +15,7 @@ $email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
 
 <body>
     <main>
-        <form action="../includes/login.php" method="post" class="form">
+        <form action="../includes/signIn.php" method="post" class="form">
             <div class="flex-column">
                 <label>Email </label>
             </div>

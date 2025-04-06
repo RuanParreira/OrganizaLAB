@@ -44,7 +44,7 @@ include("../includes/conexao.php");
                     echo "<p><strong>Observações:</strong></p>";
                     echo "<textarea readonly>" . htmlspecialchars($row['obs']) . "</textarea>";
                     echo "</div>";
-                    echo "<div id='botoes'>"; // Contêiner flex para os botões
+                    echo "<div id='botoes'>";
                     echo "<form method='POST' action='../includes/inProgress.php' style='margin: 0;'>";
                     echo "<input type='hidden' name='id' value='" . htmlspecialchars($row['id']) . "'>";
                     echo "<button type='submit'>Pronto</button>";

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Reset e Configurações Globais */
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -7,7 +8,6 @@
     box-sizing: border-box;
     text-decoration: none;
     color: white;
-
 }
 
 html {
@@ -24,8 +24,105 @@ main {
     flex-direction: column;
 }
 
-/*Hero*/
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    height: 8rem;
+    transition: background-color 0.3s ease;
+}
 
+header.scrolled {
+    background-color: rgb(15, 1, 28);
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+}
+
+#titulo h1 {
+    font-size: 3rem;
+}
+
+#titulo span {
+    font-size: 3.5rem;
+    color: blueviolet;
+}
+
+#titulo img {
+    height: 5rem;
+    border: 0.2rem solid blueviolet;
+    border-radius: 2rem;
+    margin-right: 1rem;
+}
+
+#header-menu {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.header-menu-item {
+    cursor: pointer;
+}
+
+.header-menu-item:hover {
+    color: blueviolet;
+}
+
+/* Header Button */
+
+#header-botton {
+    --color: white;
+    background-color: blueviolet;
+    font-family: inherit;
+    display: inline-block;
+    width: 10rem;
+    height: 3.5rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 1.7rem;
+    border-radius: 0.6rem;
+    font-weight: 500;
+    color: var(--color);
+}
+
+#header-botton:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 15rem;
+    width: 20rem;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+#header-botton:hover {
+    color: black;
+}
+
+#header-botton:hover:before {
+    top: -3rem;
+    left: -3rem;
+}
+
+/* Hero */
 #hero {
     display: flex;
     justify-content: space-between;
@@ -54,7 +151,8 @@ main {
     padding: 1rem 0;
 }
 
-/* Botão Começar da Hero */
+/* Hero button */
+
 #hero-cont button {
     --color: white;
     background-color: blueviolet;
@@ -82,16 +180,13 @@ main {
     height: 15rem;
     width: 20rem;
     border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
 }
 
 #hero-cont button:hover {
     color: black;
-}
-
-#hero-cont button:before {
-    top: 100%;
-    left: 100%;
-    transition: all 0.7s;
 }
 
 #hero-cont button:hover:before {
@@ -99,8 +194,7 @@ main {
     left: -3rem;
 }
 
-/*Sobre*/
-
+/* Sobre */
 #sobre {
     display: flex;
     padding: 0 8%;
@@ -160,9 +254,7 @@ main {
     font-size: 1.6rem;
 }
 
-
-/*FORMULARIO*/
-
+/* Formulário */
 #form {
     padding: 0 8%;
     margin-bottom: 8rem;
@@ -187,7 +279,6 @@ main {
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
 }
 
@@ -200,13 +291,11 @@ main {
     margin: 1rem 0;
     border: 0.3rem transparent;
     border-radius: 0.5rem;
-    box-sizing: border-box;
     color: white;
     outline: none;
 }
 
-#form-cont input[type="text"]::placeholder,
-#form-cont input[type="email"]::placeholder,
+#form-cont input::placeholder,
 #form-cont textarea::placeholder {
     color: white;
 }
@@ -217,7 +306,6 @@ main {
 }
 
 #form-cont h5 {
-    text-align: center;
     font-size: 3rem;
 }
 
@@ -225,7 +313,8 @@ main {
     color: rgb(170, 106, 230);
 }
 
-/*Botao Formulario*/
+/* Formulario button  */
+
 #form-cont button {
     --color: white;
     background-color: blueviolet;
@@ -254,16 +343,13 @@ main {
     height: 40rem;
     width: 80rem;
     border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
 }
 
 #form-cont button:hover {
     color: black;
-}
-
-#form-cont button:before {
-    top: 100%;
-    left: 100%;
-    transition: all 0.7s;
 }
 
 #form-cont button:hover:before {
@@ -272,7 +358,6 @@ main {
 }
 
 /* Footer */
-
 footer {
     font-size: 1.6rem;
     text-align: center;

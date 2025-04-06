@@ -44,7 +44,7 @@ include("../includes/conexao.php");
                     echo "</div>";
                 }
             } else {
-                echo "<p>Nenhum equipamento com status 0 encontrado.</p>";
+                echo "<p>Nenhum equipamento encontrado.</p>";
             }
             ?>
         </div>
