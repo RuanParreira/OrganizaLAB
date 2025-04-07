@@ -10,6 +10,11 @@
 
 <body>
     <main>
+        <div class="logo">
+            <img src="../images/logo.svg" alt="">
+            <h1>Organiza<span>LAB</span></h1>
+            </img>
+        </div>
         <form action="../includes/signUp.php" method="post" class="form">
 
             <div class="flex-column">

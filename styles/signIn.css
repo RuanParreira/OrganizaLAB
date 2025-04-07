@@ -30,6 +30,10 @@ main {
     flex-direction: column;
 }
 
+.logo {
+    display: none
+}
+
 /*Formulario*/
 
 .form {
@@ -58,6 +62,7 @@ main {
 }
 
 .flex-column>label {
+    font-size: 1.6rem;
     font-weight: 600;
 }
 
@@ -158,4 +163,75 @@ main {
 #button-submit:hover:before {
     top: -8rem;
     left: -10rem;
+}
+
+/* resposivel */
+
+@media screen and (max-width: 450px) {
+
+    body {
+        background-color: #424242;
+        height: 100vh;
+    }
+
+    main {
+        height: 100%;
+    }
+
+    .logo {
+        display: flex;
+        padding: 2rem 4%;
+        align-items: center;
+        font-size: 1.6rem;
+    }
+
+    .logo h1 span {
+        color: blueviolet;
+    }
+
+    .logo img {
+        width: 6rem;
+    }
+
+
+    .form {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .form label {
+        font-size: 2.5rem;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"] {
+        font-size: 2rem;
+    }
+
+    .input {
+        font-size: 2rem;
+    }
+
+    .inputForm {
+        height: 6rem;
+    }
+
+    .flex-row>div>label,
+    .flex-row span {
+        font-size: 1.6rem;
+    }
+
+    .form .p {
+        font-size: 1.6rem;
+    }
+
+    .form a {
+        font-size: 1.6rem;
+    }
+
+    #button-submit {
+        height: 5rem;
+        font-size: 2rem;
+    }
 }

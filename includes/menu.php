@@ -66,5 +66,55 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </li>
         </ul>
     </nav>
-    <script src="../scripts/sidebar.js"></script>
 </aside>
+
+<aside id="mobile">
+    <nav id="sMobile">
+        <ul>
+            <li>
+                <a href="../pages/home.php">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="../pages/services.php">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="../pages/nStarted.php">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="../pages/inProgress.php">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="../pages/done.php">
+                    <i class="fa-solid fa-circle-check"></i>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="../pages/finished.php">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+
+
+<script src="../scripts/sidebar.js"></script>

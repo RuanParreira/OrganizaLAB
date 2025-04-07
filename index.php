@@ -44,11 +44,11 @@
                     facilitando o controle de equipamentos</p>
                 <button onclick="window.location.href='pages/signUp.php'">Começar</button>
             </div>
-            <img src="images/fundo.png" alt="">
+            <img src="images/hero2.svg" alt="">
         </section>
 
         <section id="sobre">
-            <img src="images/Sobre.png" alt="">
+            <img src="images/sobre.svg" alt="">
             <div id="sobre-cont">
                 <h3>ORGANIZA<span id="titulo-sobre-cont">LAB</span></h3>
                 <p><span>OrganizaLAB </span>é um <span>website inovador </span>desenvolvido para <span>otimizar
