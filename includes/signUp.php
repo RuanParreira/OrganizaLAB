@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("link.php");
 
 $_usuario = $_POST["usuario"];
 $_email = $_POST["email"];

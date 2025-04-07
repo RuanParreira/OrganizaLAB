@@ -1,6 +1,6 @@
 <?php
-include("../includes/valida.php");
-include("../includes/conexao.php");
+include("../includes/validate.php");
+include("../includes/link.php");
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ include("../includes/conexao.php");
     ?>
 
     <main>
-        <h1>Equipamentos <span>em Progresso</span></h1>
+        <h1>Serviços <span>em Progresso</span></h1>
         <div class="cards">
             <?php
             $sql = "SELECT id, nome, equip, problema, data, obs, numero FROM equipamentos WHERE status = 1 AND id_usuario = ?";
@@ -54,7 +54,7 @@ include("../includes/conexao.php");
                     echo "</div>";
                 }
             } else {
-                echo "<p>Nenhum equipamento em progresso encontrado.</p>";
+                echo "<p id='nResultado'>Nenhum serviço encontrado.</p>";
             }
             ?>
         </div>
@@ -64,7 +64,7 @@ include("../includes/conexao.php");
         <div class="modal-content">
             <span class="close" onclick="closeEditModal()">&times;</span>
             <h2>Editar Equipamento</h2>
-            <form id="editForm" method="POST" action="../includes/editar.php">
+            <form id="editForm" method="POST" action="../includes/edit.php">
                 <input type="hidden" name="id" id="editId">
                 <label for="editNome">Nome:</label>
                 <input type="text" name="nome" id="editNome" required>
@@ -83,7 +83,7 @@ include("../includes/conexao.php");
         </div>
     </div>
 
-    <script src="../scripts/editar.js"></script>
+    <script src="../scripts/edit.js"></script>
 </body>
 
 </html>

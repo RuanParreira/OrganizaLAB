@@ -1,6 +1,6 @@
 <?php
-include("../includes/valida.php");
-include("../includes/conexao.php");
+include("../includes/validate.php");
+include("../includes/link.php");
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ include("../includes/conexao.php");
                     echo "</div>";
                 }
             } else {
-                echo "<p>Nenhum equipamento encontrado.</p>";
+                echo "<p id='nResultado'>Nenhum serviço encontrado.</p>";
             }
             ?>
         </div>

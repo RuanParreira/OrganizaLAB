@@ -22,7 +22,7 @@ main span {
     color: blueviolet;
 }
 
-main p {
+#nResultado {
     margin-top: 30rem;
     font-size: 2.5rem;
     text-align: center;
@@ -33,8 +33,8 @@ main p {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     width: fit-content;
 }
 

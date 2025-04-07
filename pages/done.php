@@ -1,6 +1,6 @@
 <?php
-include("../includes/valida.php");
-include("../includes/conexao.php");
+include("../includes/validate.php");
+include("../includes/link.php");
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ include("../includes/conexao.php");
     ?>
 
     <main>
-        <h1>Equipamentos <span>Concluídos</span></h1>
+        <h1>Serviços <span>Concluídos</span></h1>
         <div class="cards">
             <?php
             $sql = "SELECT id, nome, equip, problema, data FROM equipamentos WHERE status = 2 AND id_usuario = ?";
@@ -44,7 +44,7 @@ include("../includes/conexao.php");
                     echo "</div>";
                 }
             } else {
-                echo "<p>Nenhum equipamento concluído encontrado.</p>";
+                echo "<p id='nResultado'>Nenhum serviço encontrado.</p>";
             }
             ?>
         </div>

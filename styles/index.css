@@ -25,6 +25,7 @@ main {
 }
 
 /* Header */
+
 header {
     width: 100%;
     display: flex;
@@ -40,6 +41,10 @@ header {
 
 header.scrolled {
     background-color: rgb(15, 1, 28);
+}
+
+header #buttonSidebar {
+    display: none;
 }
 
 #titulo {
@@ -58,9 +63,6 @@ header.scrolled {
 
 #titulo img {
     height: 5rem;
-    border: 0.2rem solid blueviolet;
-    border-radius: 2rem;
-    margin-right: 1rem;
 }
 
 #header-menu {
@@ -363,4 +365,145 @@ footer {
     text-align: center;
     padding: 1.5rem;
     background-color: rgb(15, 1, 28);
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    #menu {
+        display: none;
+    }
+
+    /* header */
+    header img {
+        width: 4.5rem;
+    }
+
+    header {
+        height: 6rem;
+        padding: 1.5rem 5%;
+    }
+
+    #header-botton {
+        display: none;
+    }
+
+    #titulo h1,
+    #titulo h1 span {
+        font-size: 2.4rem;
+    }
+
+    /* hero */
+    #hero {
+        display: flex;
+        height: calc(86vh - 6rem);
+        margin-top: 6rem;
+        justify-content: center;
+        gap: 0;
+        padding: 0 5%;
+    }
+
+    #hero img {
+        display: none;
+    }
+
+    #hero-cont h2,
+    #hero-cont span {
+        font-size: 4rem;
+    }
+
+    #hero-cont p {
+        font-size: 2rem;
+    }
+
+
+    /* sobre */
+    #sobre {
+        padding: 0 5%;
+    }
+
+    #sobre h3,
+    #sobre #titulo-sobre-cont {
+        font-size: 4rem;
+    }
+
+    #sobre img {
+        display: none;
+    }
+
+    #sobre h4,
+    #sobre h4 span {
+        font-size: 2.5rem;
+    }
+
+    #beneficios li {
+        font-size: 1.5rem;
+    }
+
+    #form h6 {
+        font-size: 4rem
+    }
+
+
+
+
+    /* form */
+
+    #form {
+        padding: 0 4%;
+    }
+
+    #form-cont {
+        padding: 2rem;
+    }
+
+    /* Sidebar */
+
+    header #buttonSidebar {
+        display: block;
+    }
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }

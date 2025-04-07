@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("link.php");
 session_start();
 
 $id_usuario = $_SESSION['user_id'];
@@ -18,4 +18,4 @@ $stmt->execute();
 $stmt->close();
 $conn->close();
 
-header("Location: ../pages/register.php");
+header("Location: ../pages/services.php");

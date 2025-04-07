@@ -1,5 +1,5 @@
 <?php
-include("../includes/conexao.php");
+include("../includes/link.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = intval($_POST['id']);

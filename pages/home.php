@@ -1,6 +1,6 @@
 <?php
-include("../includes/valida.php");
-include("../includes/conexao.php");
+include("../includes/validate.php");
+include("../includes/link.php");
 ?>
 
 <!DOCTYPE html>

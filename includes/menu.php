@@ -15,7 +15,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </button>
         <h1>Organiza<span>LAB<span></h1>
     </div>
-    <button id="sair" onclick="window.location.href='../includes/sair.php'">
+    <button id="sair" onclick="window.location.href='../includes/leave.php'">
         SAIR
     </button>
 </header>
@@ -30,8 +30,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </a>
             </li>
 
-            <li class="side-item <?php echo $current_page == 'register.php' ? 'active' : ''; ?>">
-                <a href="../pages/register.php">
+            <li class="side-item <?php echo $current_page == 'services.php' ? 'active' : ''; ?>">
+                <a href="../pages/services.php">
                     <i class="fa-solid fa-user"></i>
                     <span class="item-description"> Cadastro </span>
                 </a>

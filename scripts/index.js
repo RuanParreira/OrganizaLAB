@@ -7,3 +7,17 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+const sidebarLinks = document.querySelectorAll('#mySidenav a');
+sidebarLinks.forEach(link => {
+    link.addEventListener('click', closeNav);
+});

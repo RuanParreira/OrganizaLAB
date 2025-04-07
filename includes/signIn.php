@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("link.php");
 session_start();
 
 $email = $_POST['email'];

@@ -11,7 +11,7 @@
 <body>
     <header>
         <div id="titulo">
-            <img src="images/Organiza4.svg" alt="">
+            <img src="images/logo.svg" alt="">
             <h1>Organiza<span>LAB</span></h1>
         </div>
 
@@ -26,6 +26,14 @@
         <button id="header-botton" onclick="window.location.href='pages/signIn.php'">
             Entrar
         </button>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#hero">Inicio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#form">Contato</a>
+        </div>
+        <span id="buttonSidebar" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
     </header>
 
     <main>
@@ -80,6 +88,7 @@
     <footer>
         <p>Feito por Ruan Parreira © 2025</p>
     </footer>
+
 
     <script src="scripts/index.js"></script>
 

@@ -1,10 +1,10 @@
 <?php
-include("../includes/conexao.php");
+include("../includes/link.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
-    $numero = $_POST['numero']; // Recebe o campo "Número"
-    $nome = $_POST['nome']; // Recebe o campo "Nome"
+    $numero = $_POST['numero'];
+    $nome = $_POST['nome'];
     $equip = $_POST['equip'];
     $problema = $_POST['problema'];
     $data = $_POST['data'];
