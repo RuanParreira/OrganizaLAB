@@ -498,6 +498,8 @@ footer {
     margin-left: 50px;
 }
 
+/* Responsivel */
+
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;

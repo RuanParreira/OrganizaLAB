@@ -1,7 +1,7 @@
 main {
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 5.6rem);
+  height: calc(100vh - 5.6rem);
   margin-left: 8rem;
   margin-top: 5.6rem;
 }
@@ -116,4 +116,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #Btn:hover:before {
   top: -8rem;
   left: -10rem;
+}
+
+/* Responsivel */
+
+@media screen and (max-width: 1200px) {
+
+  main {
+    margin-left: 0;
+    height: calc(100vh - 6rem - 6rem);
+    width: 100%;
+    padding: 0 4%;
+  }
+
+  form {
+    padding: 1rem;
+  }
 }

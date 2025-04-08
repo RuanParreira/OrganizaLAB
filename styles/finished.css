@@ -52,3 +52,14 @@ table th {
     color: white;
 
 }
+
+/* Responsivel */
+@media screen and (max-width: 1200px) {
+    main {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 6rem;
+        margin-bottom: 8rem;
+        padding: 0 4%;
+    }
+}

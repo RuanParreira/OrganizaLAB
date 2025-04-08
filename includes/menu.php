@@ -70,43 +70,33 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <aside id="mobile">
     <nav id="sMobile">
-        <ul>
-            <li>
+        <ul id='mobile-items'>
+            <li class="mobile-item <?php echo $current_page == 'home.php' ? 'active' : ''; ?>">
                 <a href="../pages/home.php">
                     <i class="fa-solid fa-house"></i>
                 </a>
             </li>
-        </ul>
-        <ul>
-            <li>
+            <li class="mobile-item <?php echo $current_page == 'services.php' ? 'active' : ''; ?>">
                 <a href="../pages/services.php">
                     <i class="fa-solid fa-user"></i>
                 </a>
             </li>
-        </ul>
-        <ul>
-            <li>
+            <li class="mobile-item <?php echo $current_page == 'nStarted.php' ? 'active' : ''; ?>">
                 <a href="../pages/nStarted.php">
                     <i class="fa-solid fa-play"></i>
                 </a>
             </li>
-        </ul>
-        <ul>
-            <li>
+            <li class="mobile-item <?php echo $current_page == 'inProgress.php' ? 'active' : ''; ?>">
                 <a href="../pages/inProgress.php">
                     <i class="fa-solid fa-clock-rotate-left"></i>
                 </a>
             </li>
-        </ul>
-        <ul>
-            <li>
+            <li class="mobile-item <?php echo $current_page == 'done.php' ? 'active' : ''; ?>">
                 <a href="../pages/done.php">
                     <i class="fa-solid fa-circle-check"></i>
                 </a>
             </li>
-        </ul>
-        <ul>
-            <li>
+            <li class="mobile-item <?php echo $current_page == 'finished.php' ? 'active' : ''; ?>">
                 <a href="../pages/finished.php">
                     <i class="fa-solid fa-thumbs-up"></i>
                 </a>
@@ -116,5 +106,5 @@ $current_page = basename($_SERVER['PHP_SELF']);
 </aside>
 
 
-
+<script src="../scripts/menuMobile.js"></script>
 <script src="../scripts/sidebar.js"></script>

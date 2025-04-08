@@ -42,8 +42,14 @@ include("../includes/link.php");
   ?>
 
   <main>
+    <div class="buttons">
+      <button class="buttonStatus active" id="iniciados">N-Iniciados</button>
+      <button class="buttonStatus" id="progresso">Progresso</button>
+      <button class="buttonStatus" id="concluido">Concluidos</button>
+    </div>
+
     <div id="cards">
-      <div class="card">
+      <div class="card active" id="card-iniciados">
         <h2>Não Iniciados</h2>
         <?php
         if ($result0->num_rows > 0) {
@@ -61,7 +67,7 @@ include("../includes/link.php");
       </div>
 
       <!-- Card para status 1 -->
-      <div class="card">
+      <div class="card" id="card-progresso">
 
         <h2>Em Progresso</h2>
         <?php
@@ -81,7 +87,7 @@ include("../includes/link.php");
       </div>
 
       <!-- Card para status 2 -->
-      <div class="card">
+      <div class="card" id="card-concluido">
         <h2>Concluídos</h2>
         <?php
         if ($result2->num_rows > 0) {
@@ -100,6 +106,7 @@ include("../includes/link.php");
     </div>
   </main>
 
+  <script src="../scripts/home.js"></script>
 </body>
 
 </html>
