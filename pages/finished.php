@@ -21,7 +21,7 @@ include("../includes/link.php");
     <main>
         <h1>Serviços <span>Finalizados</span></h1>
         <?php
-        $sql = "SELECT id_service, name_client, equipment, problem FROM services WHERE status = 3 AND id_user = ?";
+        $sql = "SELECT id_service, cpf_client, name_client, number_client, equipment, problem, date FROM services WHERE status = 3 AND id_user = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $id_user);
         $stmt->execute();
@@ -29,12 +29,22 @@ include("../includes/link.php");
 
         if ($result->num_rows > 0) {
             echo "<table border='1'>";
-            echo "<tr><th>Nome</th><th>Equipamento</th><th>Problema Detectado</th></tr>";
+            echo "<tr>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Equipamento</th>
+            <th>Problema Detectado</th>
+            <th>Data</th>
+            </tr>";
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
+                echo "<td>" . htmlspecialchars($row['cpf_client']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['name_client']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['number_client']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['equipment']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['problem']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['date']) . "</td>";
                 echo "</tr>";
             }
             echo "</table>";

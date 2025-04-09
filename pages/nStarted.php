@@ -22,7 +22,7 @@ include("../includes/link.php");
         <h1>Serviços <span>Não Iniciados<span></h1>
         <div class="cards">
             <?php
-            $sql = "SELECT id_service, name_client, equipment, problem, date FROM services WHERE status = 0 AND id_user = ?";
+            $sql = "SELECT id_service, name_client, number_client, equipment, problem, date FROM services WHERE status = 0 AND id_user = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("i", $id_user);
             $stmt->execute();
@@ -32,6 +32,7 @@ include("../includes/link.php");
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
                     echo "<h2>" . htmlspecialchars($row['name_client']) . "</h2>";
+                    echo "<h3>" . htmlspecialchars($row['number_client']) . "</h3>";
                     echo "<div class='card-fundo'>";
                     echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equipment']) . "</p>";
                     echo "<p><strong>Problema:</strong> " . htmlspecialchars($row['problem']) . "</p>";

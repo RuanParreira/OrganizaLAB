@@ -50,6 +50,7 @@ include("../includes/link.php");
                     echo "<button type='submit'>Pronto</button>";
                     echo "</form>";
                     echo "<button type='button' class='edit-btn' onclick='openEditModal(" . htmlspecialchars(json_encode($row)) . ")'>Editar</button>";
+                    echo "<button type='button' class='delete-btn' onclick='confirmDelete(" . htmlspecialchars($row['id_service']) . ")'>Excluir</button>";
                     echo "</div>";
                     echo "</div>";
                 }
@@ -83,6 +84,7 @@ include("../includes/link.php");
         </div>
     </div>
 
+    <script src="../scripts/delete.js"></script>
     <script src="../scripts/edit.js"></script>
 </body>
 

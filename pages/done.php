@@ -11,6 +11,11 @@ include("../includes/link.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/done.css">
     <title>Equipamentos Concluídos</title>
+    <script>
+        function confirmFinalize() {
+            return confirm("Você tem certeza que deseja finalizar este serviço?");
+        }
+    </script>
 </head>
 
 <body>
@@ -22,7 +27,7 @@ include("../includes/link.php");
         <h1>Serviços <span>Concluídos</span></h1>
         <div class="cards">
             <?php
-            $sql = "SELECT id_service, name_client, equipment, problem, date FROM services WHERE status = 2 AND id_user = ?";
+            $sql = "SELECT id_service, name_client, equipment, problem, date, cpf_client FROM services WHERE status = 2 AND id_user = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("i", $id_user);
             $stmt->execute();
@@ -34,12 +39,13 @@ include("../includes/link.php");
                     echo "<h2>" . htmlspecialchars($row['name_client']) . "</h2>";
                     echo "<div class='card-fundo'>";
                     echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equipment']) . "</p>";
-                    echo "<p><strong>Problema Detectado:</strong> " . htmlspecialchars($row['problem']) . "</p>";
+                    echo "<p><strong>Problema:</strong> " . htmlspecialchars($row['problem']) . "</p>";
                     echo "<p><strong>Data:</strong> " . htmlspecialchars($row['date']) . "</p>";
+                    echo "<p><strong>CPF:</strong> " . htmlspecialchars($row['cpf_client']) . "</p>";
                     echo "<form method='POST' action='../includes/done.php'>";
                     echo "<input type='hidden' name='id_service' value='" . htmlspecialchars($row['id_service']) . "'>";
                     echo "</div>";
-                    echo "<button type='submit'>Finalizar</button>";
+                    echo "<button type='submit' onclick='return confirmFinalize()'>Finalizar</button>";
                     echo "</form>";
                     echo "</div>";
                 }
@@ -50,5 +56,7 @@ include("../includes/link.php");
         </div>
     </main>
 </body>
+
+<script src="../scripts/finish.js"></script>
 
 </html>
