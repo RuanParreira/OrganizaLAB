@@ -126,10 +126,38 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-left: 0;
     height: calc(100vh - 6rem - 6rem);
     width: 100%;
-    padding: 0 4%;
   }
 
   form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 1rem;
+    height: 100%;
+    align-items: center;
+    border-radius: 0;
+  }
+
+  form input[type="text"],
+  form input[type="date"] {
+    font-size: 2rem;
+  }
+
+  .celularDate {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .equipPro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  #mobile {
+    margin: 0;
   }
 }
