@@ -2,11 +2,11 @@
 include("../includes/link.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = intval($_POST['id']);
+    $id_service = intval($_POST['id_service']);
 
-    $sql = "UPDATE equipamentos SET status = 2 WHERE id = ?";
+    $sql = "UPDATE services SET status = 2 WHERE id_service = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $id);
+    $stmt->bind_param("i", $id_service);
 
     if ($stmt->execute()) {
         echo "Status do equipamento atualizado com sucesso!";

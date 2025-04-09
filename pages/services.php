@@ -22,15 +22,15 @@ include("../includes/validate.php");
 
   <main>
     <form method="post" action="../includes/services.php">
-      <input type="text" name="nome" id="nome" placeholder="Nome:" required />
-      <input type="text" name="numero" id="numero" placeholder="Numero:" required />
+      <input type="text" name="name_client" id="name_client" placeholder="Nome:" required />
+      <input type="text" name="number_client" id="number_client" placeholder="Numero:" required />
       <div class="celularDate">
-        <input type="text" name="cpf" id="cpf" placeholder="CPF: " required />
-        <input type="date" name="data" id="data" placeholder="Data:" required />
+        <input type="text" name="cpf_client" id="cpf_client" placeholder="CPF: " required />
+        <input type="date" name="date" id="date" placeholder="Data:" required />
       </div>
       <div class="equipPro">
-        <input type="text" name="equip" id="equip" placeholder="Equipamento:" required />
-        <input type="text" name="problema" id="problema" placeholder="Problema Detectado:" />
+        <input type="text" name="equipment" id="equipment" placeholder="Equipamento:" required />
+        <input type="text" name="problem" id="problem" placeholder="Problema Detectado:" />
       </div>
       <button input type="submit" id="Btn">CADASTRAR</button>
     </form>

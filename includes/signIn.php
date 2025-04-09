@@ -3,22 +3,22 @@ include("link.php");
 session_start();
 
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$password = $_POST['password'];
 
 //Lembrese de mim
 $rememberMe = isset($_POST['remember_me']);
 
-$stmt = $conn->prepare("SELECT email, id_usuario FROM usuarios WHERE email = ? AND senha = ?");
-$stmt->bind_param("ss", $email, $senha);
+$stmt = $conn->prepare("SELECT email, id_user FROM users WHERE email = ? AND password = ?");
+$stmt->bind_param("ss", $email, $password);
 
 $stmt->execute();
 
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    $user = $result->fetch_assoc();
+    $username = $result->fetch_assoc();
 
-    $_SESSION['user_id'] = $user['id_usuario'];
+    $_SESSION['id_user'] = $username['id_user'];
 
     if ($rememberMe) {
         setcookie("remember_me", $email, time() + (30 * 24 * 60 * 60), "/");

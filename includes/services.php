@@ -2,16 +2,16 @@
 include("link.php");
 session_start();
 
-$id_usuario = $_SESSION['user_id'];
-$_nome = $_POST["nome"];
-$_numero = $_POST["numero"];
-$_cpf = $_POST["cpf"];
-$_data = $_POST["data"];
-$_equipamento = $_POST["equip"];
-$_problema = $_POST["problema"];
+$id_user = $_SESSION['id_user'];
+$_name_client = $_POST["name_client"];
+$_number_client = $_POST["number_client"];
+$_cpf_client = $_POST["cpf_client"];
+$_date = $_POST["date"];
+$_equipment = $_POST["equipment"];
+$_problem = $_POST["problem"];
 
-$stmt = $conn->prepare("INSERT INTO equipamentos (nome, numero, cpf, data, equip, problema, id_usuario) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssssi", $_nome, $_numero, $_cpf, $_data, $_equipamento, $_problema, $id_usuario);
+$stmt = $conn->prepare("INSERT INTO services (id_user, name_client, number_client, cpf_client, date, equipment, problem) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("issssss", $id_user, $_name_client, $_number_client, $_cpf_client, $_date, $_equipment, $_problem);
 
 $stmt->execute();
 

@@ -22,9 +22,9 @@ include("../includes/link.php");
         <h1>Serviços <span>em Progresso</span></h1>
         <div class="cards">
             <?php
-            $sql = "SELECT id, nome, equip, problema, data, obs, numero FROM equipamentos WHERE status = 1 AND id_usuario = ?";
+            $sql = "SELECT id_service, name_client, equipment, problem, date, obs, number_client FROM services WHERE status = 1 AND id_user = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("i", $id_usuario);
+            $stmt->bind_param("i", $id_user);
             $stmt->execute();
             $result = $stmt->get_result();
 
@@ -32,13 +32,13 @@ include("../includes/link.php");
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
                     echo "<div class='card-header'>";
-                    echo "<h2>" . htmlspecialchars($row['nome']) . "</h2>";
-                    echo "<h3>" . htmlspecialchars($row['numero']) . "</h3>";
+                    echo "<h2>" . htmlspecialchars($row['name_client']) . "</h2>";
+                    echo "<h3>" . htmlspecialchars($row['number_client']) . "</h3>";
                     echo "</div>";
                     echo "<div class='infoFundo'>";
-                    echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equip']) . "</p>";
-                    echo "<p><strong>Problema:</strong> " . htmlspecialchars($row['problema']) . "</p>";
-                    echo "<p><strong>Data:</strong> " . htmlspecialchars($row['data']) . "</p>";
+                    echo "<p><strong>Equipamento:</strong> " . htmlspecialchars($row['equipment']) . "</p>";
+                    echo "<p><strong>Problema:</strong> " . htmlspecialchars($row['problem']) . "</p>";
+                    echo "<p><strong>Data:</strong> " . htmlspecialchars($row['date']) . "</p>";
                     echo "</div>";
                     echo "<div class='observacao-container'>";
                     echo "<p><strong>Observações:</strong></p>";
@@ -46,7 +46,7 @@ include("../includes/link.php");
                     echo "</div>";
                     echo "<div id='botoes'>";
                     echo "<form method='POST' action='../includes/inProgress.php' style='margin: 0;'>";
-                    echo "<input type='hidden' name='id' value='" . htmlspecialchars($row['id']) . "'>";
+                    echo "<input type='hidden' name='id_service' value='" . htmlspecialchars($row['id_service']) . "'>";
                     echo "<button type='submit'>Pronto</button>";
                     echo "</form>";
                     echo "<button type='button' class='edit-btn' onclick='openEditModal(" . htmlspecialchars(json_encode($row)) . ")'>Editar</button>";
@@ -67,15 +67,15 @@ include("../includes/link.php");
             <form id="editForm" method="POST" action="../includes/edit.php">
                 <input type="hidden" name="id" id="editId">
                 <label for="editNome">Nome:</label>
-                <input type="text" name="nome" id="editNome" required>
+                <input type="text" name="name_client" id="editNome" required>
                 <label for="editNumero">Número:</label>
-                <input type="text" name="numero" id="editNumero" required>
+                <input type="text" name="number_client" id="editNumero" required>
                 <label for="editEquip">Equipamento:</label>
-                <input type="text" name="equip" id="editEquip" required>
+                <input type="text" name="equipment" id="editEquip" required>
                 <label for="editProblema">Problema:</label>
-                <textarea name="problema" id="editProblema" required></textarea>
+                <textarea name="problem" id="editProblema" required></textarea>
                 <label for="editData">Data:</label>
-                <input type="date" name="data" id="editData" required>
+                <input type="date" name="date" id="editData" required>
                 <label for="editObs">Observações:</label>
                 <textarea name="obs" id="editObs"></textarea>
                 <button type="submit">Salvar</button>

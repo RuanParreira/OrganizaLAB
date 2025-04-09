@@ -81,6 +81,27 @@ header #buttonSidebar {
     color: blueviolet;
 }
 
+#header-menu li {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#header-menu li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.3rem;
+    border-bottom: 2px solid blueviolet;
+    transition: width 0.3s ease;
+
+}
+
+#header-menu li:hover::after {
+    width: 100%;
+}
+
 /* Header Button */
 
 #header-botton {
@@ -507,5 +528,9 @@ footer {
 
     .sidenav a {
         font-size: 18px;
+    }
+
+    .botton-mobile {
+        display: flex;
     }
 }

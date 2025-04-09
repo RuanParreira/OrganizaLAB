@@ -21,9 +21,9 @@ include("../includes/link.php");
     <main>
         <h1>Serviços <span>Finalizados</span></h1>
         <?php
-        $sql = "SELECT id, nome, equip, problema FROM equipamentos WHERE status = 3 AND id_usuario = ?";
+        $sql = "SELECT id_service, name_client, equipment, problem FROM services WHERE status = 3 AND id_user = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $id_usuario);
+        $stmt->bind_param("i", $id_user);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -32,9 +32,9 @@ include("../includes/link.php");
             echo "<tr><th>Nome</th><th>Equipamento</th><th>Problema Detectado</th></tr>";
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['equip']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['problema']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['name_client']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['equipment']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['problem']) . "</td>";
                 echo "</tr>";
             }
             echo "</table>";

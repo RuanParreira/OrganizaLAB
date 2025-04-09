@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['id_user'])) {
     header("Location: ../pages/signIn.php");
     exit();
 }
 
-$id_usuario = $_SESSION['user_id'];
+$id_user = $_SESSION['id_user'];

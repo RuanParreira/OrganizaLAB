@@ -2,17 +2,17 @@
 include("../includes/link.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = $_POST['id'];
-    $numero = $_POST['numero'];
-    $nome = $_POST['nome'];
-    $equip = $_POST['equip'];
-    $problema = $_POST['problema'];
-    $data = $_POST['data'];
+    $id_service = $_POST['id_service'];
+    $number_client = $_POST['number_client'];
+    $name_client = $_POST['name_client'];
+    $equipment = $_POST['equipment'];
+    $problem = $_POST['problem'];
+    $date = $_POST['date'];
     $obs = $_POST['obs'];
 
-    $sql = "UPDATE equipamentos SET numero = ?, nome = ?, equip = ?, problema = ?, data = ?, obs = ? WHERE id = ?";
+    $sql = "UPDATE services SET number_client = ?, name_client = ?, equipment = ?, problem = ?, date = ?, obs = ? WHERE id_service = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssssi", $numero, $nome, $equip, $problema, $data, $obs, $id);
+    $stmt->bind_param("ssssssi", $number_client, $name_client, $equipment, $problem, $date, $obs, $id_service);
 
     if ($stmt->execute()) {
         header("Location: ../pages/inProgress.php");

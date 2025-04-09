@@ -31,6 +31,7 @@
             <a href="#hero">Inicio</a>
             <a href="#sobre">Sobre</a>
             <a href="#form">Contato</a>
+            <a href="pages/signIn.php">Entrar</a>
         </div>
         <span id="buttonSidebar" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
