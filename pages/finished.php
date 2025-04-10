@@ -28,13 +28,14 @@ include("../includes/link.php");
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
+            echo "<div class='table-container'>";
             echo "<table border='1'>";
             echo "<tr>
             <th>CPF</th>
             <th>Nome</th>
             <th>Telefone</th>
             <th>Equipamento</th>
-            <th>Problema Detectado</th>
+            <th>Problema</th>
             <th>Data</th>
             </tr>";
             while ($row = $result->fetch_assoc()) {
@@ -44,10 +45,11 @@ include("../includes/link.php");
                 echo "<td>" . htmlspecialchars($row['number_client']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['equipment']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['problem']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['date']) . "</td>";
+                echo "<td id='data'>" . htmlspecialchars($row['date']) . "</td>";
                 echo "</tr>";
             }
             echo "</table>";
+            echo "</div>";
         } else {
             echo "<p id='nResultado'>Nenhum serviço encontrado.</p>";
         }

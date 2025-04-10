@@ -66,7 +66,7 @@ include("../includes/link.php");
             <span class="close" onclick="closeEditModal()">&times;</span>
             <h2>Editar Equipamento</h2>
             <form id="editForm" method="POST" action="../includes/edit.php">
-                <input type="hidden" name="id" id="editId">
+                <input type="hidden" name="id_service" id="editId">
                 <label for="editNome">Nome:</label>
                 <input type="text" name="name_client" id="editNome" required>
                 <label for="editNumero">Número:</label>

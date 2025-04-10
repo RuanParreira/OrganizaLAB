@@ -4,6 +4,7 @@ main {
     height: calc(100% - 5.6rem);
     width: calc(100% - 8.2rem);
     display: flex;
+    padding: 0 4%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -35,13 +36,25 @@ table {
     color: white;
     border-collapse: collapse;
     height: 30px;
-    width: 80%;
+    width: 100%;
+}
+
+.table-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    width: 100%;
+}
+
+#data {
+    width: 12rem;
 }
 
 table th,
 table td {
-    padding: 5px;
-    text-align: left;
+    padding: .8rem;
+    text-align: center;
 }
 
 table tr {
@@ -66,7 +79,15 @@ table th {
         width: 100%;
         margin-top: 6rem;
         margin-bottom: 8rem;
-        padding: 0 4%;
+        padding: 0 0%;
     }
 
+    .table-container {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    #data {
+        white-space: nowrap;
+    }
 }

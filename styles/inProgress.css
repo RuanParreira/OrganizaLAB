@@ -37,7 +37,7 @@ main span {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .card {
@@ -55,6 +55,7 @@ main span {
     background-color: #4f4f4f;
     padding: 1rem;
     border-radius: 1rem;
+    flex-grow: 1;
 }
 
 .card .observacao-container {
