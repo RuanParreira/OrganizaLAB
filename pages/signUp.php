@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/signUp.css">
-    <title>Document</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <title>Registrar-OrganizaLAB</title>
 </head>
 
 <body>
     <main>
         <div class="logo">
-            <img src="../images/logo.svg" alt="">
+            <img src="../images/logo.png" alt="">
             <h1>Organiza<span>LAB</span></h1>
             </img>
         </div>

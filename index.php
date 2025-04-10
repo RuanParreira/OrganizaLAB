@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
     <title>OrganizaLAB</title>
 </head>
 
 <body>
     <header>
         <div id="titulo">
-            <img src="images/logo.svg" alt="">
+            <img src="images/logo.png" alt="">
             <h1>Organiza<span>LAB</span></h1>
         </div>
 
@@ -45,7 +46,7 @@
                     facilitando o controle de equipamentos</p>
                 <button onclick="window.location.href='pages/signUp.php'">Começar</button>
             </div>
-            <img src="images/hero2.svg" alt="">
+            <img src="images/hero.svg" alt="">
         </section>
 
         <section id="sobre">

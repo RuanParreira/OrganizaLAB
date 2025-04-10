@@ -10,13 +10,14 @@ $email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/signIn.css">
-    <title>Document</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <title>Entrar-OrganizaLAB</title>
 </head>
 
 <body>
     <main>
         <div class="logo">
-            <img src="../images/logo.svg" alt="">
+            <img src="../images/logo.png" alt="">
             <h1>Organiza<span>LAB</span></h1>
             </img>
         </div>
