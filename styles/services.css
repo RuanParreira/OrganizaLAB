@@ -122,17 +122,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media screen and (max-width: 1200px) {
 
+  * {
+    outline: 1px solid red;
+  }
+
+  header {
+    position: relative;
+  }
+
   main {
     margin-top: 0;
     margin-left: 0;
-    height: 100vh;
+    height: calc(100vh - 6rem - 6rem);
     width: 100vw;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0 4%;
     height: 100%;
     width: 100%;
     align-items: center;

@@ -66,6 +66,8 @@
             <p class="p">Já tem uma conta? <a href="signIn.php" class="span">Entrar</a>
         </form>
     </main>
+
+    <script src="../scripts/validateForm.js"></script>
 </body>
 
 </html>
