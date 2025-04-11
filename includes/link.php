@@ -4,10 +4,10 @@
 // $senha = "";
 // $dbname = "organizalab";
 
-$servidor = "sql101.infinityfree.com";
-$usuario = "if0_38721638";
-$senha = "nyhpzWIPbdeQ5DG";
-$dbname = "if0_38721638_organizalab";
+$servidor = "localhost";
+$usuario = "u637029734_admin";
+$senha = "N^tX$;6Ad";
+$dbname = "u637029734_organizalab";
 
 $conn = new mysqli($servidor, $usuario, $senha, $dbname);
 if ($conn->connect_error) {
