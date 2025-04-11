@@ -65,8 +65,6 @@ $email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
         if (isset($_SESSION['resposta'])) {
             echo ("alert('" . $_SESSION['resposta'] . "')");
             unset($_SESSION['resposta']);
-        } else {
-            echo ("alert('ERRO!')");
         }
         ?>
     </script>
