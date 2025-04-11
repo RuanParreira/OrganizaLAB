@@ -8,7 +8,7 @@ $email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/signIn.css">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <title>Entrar-OrganizaLAB</title>
@@ -66,7 +66,7 @@ $email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
             echo ("alert('" . $_SESSION['resposta'] . "')");
             unset($_SESSION['resposta']);
         } else {
-            echo ("alert(CUZIN)");
+            echo ("alert('ERRO!')");
         }
         ?>
     </script>
