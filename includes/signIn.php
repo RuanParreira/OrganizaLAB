@@ -2,10 +2,10 @@
 include("link.php");
 session_start();
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+$email = trim($_POST['email']);
+$password = trim($_POST['password']);
 
-//Lembrese de mim
+// Lembre-se de mim
 $rememberMe = isset($_POST['remember_me']);
 
 $stmt = $conn->prepare("SELECT email, id_user FROM users WHERE email = ? AND password = ?");

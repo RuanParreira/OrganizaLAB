@@ -22,7 +22,7 @@ include("../includes/validate.php");
   ?>
 
   <main>
-    <form method="post" action="../includes/services.php">
+    <form method="post" action="../includes/services.php" autocomplete="off">
       <input type="text" name="name_client" id="name_client" placeholder="Nome:" required />
       <input type="text" name="number_client" id="number_client" placeholder="Numero:" required />
       <div class="celularDate">
@@ -36,6 +36,17 @@ include("../includes/validate.php");
       <button input type="submit" id="Btn">CADASTRAR</button>
     </form>
   </main>
+
+  <script>
+    <?php
+    if (isset($_SESSION['resposta'])) {
+      echo ("alert('" . $_SESSION['resposta'] . "')");
+      unset($_SESSION['resposta']);
+    }
+    ?>
+  </script>
+  <script src="../scripts/validadeServices.js"></script>
+  <script src="../scripts/services.js"></script>
 </body>
 
 </html>

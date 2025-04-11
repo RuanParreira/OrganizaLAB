@@ -122,10 +122,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media screen and (max-width: 1200px) {
 
-  * {
-    outline: 1px solid red;
-  }
-
   header {
     position: relative;
   }
