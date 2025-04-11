@@ -228,6 +228,7 @@ header {
     header {
         height: 6rem;
         padding: 1.5rem 4%;
+        position: relative;
     }
 
     #sidebar {
