@@ -120,6 +120,30 @@ main {
     margin: 0.5rem 0;
 }
 
+
+#mostrarSenhas {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    width: 4rem;
+}
+
+#mostrarSenhas:hover {
+    cursor: pointer;
+}
+
+#mostrarSenhas i {
+    color: white;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-outer-spin-button {
+    display: none;
+}
+
 /*Botao Formulario*/
 #button-submit {
     --color: white;

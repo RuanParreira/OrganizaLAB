@@ -99,10 +99,6 @@ main {
     justify-content: space-between;
 }
 
-.flex-row>div>label {
-    font-size: 1.4rem;
-    font-weight: 400;
-}
 
 .span {
     font-size: 1.4rem;
@@ -116,6 +112,29 @@ main {
     text-align: center;
     font-size: 1.4rem;
     margin: 0.5rem 0;
+}
+
+#mostrarSenhas {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    width: 4rem;
+}
+
+#mostrarSenhas:hover {
+    cursor: pointer;
+}
+
+#mostrarSenhas i {
+    color: white;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-outer-spin-button {
+    display: none;
 }
 
 
@@ -137,6 +156,7 @@ main {
     font-weight: 500;
     color: var(--color);
     border-radius: 1rem;
+    margin-top: 2rem;
 }
 
 #button-submit:before {
@@ -217,7 +237,6 @@ main {
         height: 6rem;
     }
 
-    .flex-row>div>label,
     .flex-row span {
         font-size: 1.6rem;
     }
