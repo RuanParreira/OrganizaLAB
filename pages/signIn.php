@@ -54,7 +54,7 @@ $email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
                 </div>
                 <span class="span">Esqueceu a senha?</span>
             </div>
-            <button type="input" id="button-submit">Entrar</button>
+            <button type="submit" id="button-submit">Entrar</button>
             <p class="p">Não tem uma conta? <a href="signUp.php" class="span">Registrar</a>
         </form>
     </main>
