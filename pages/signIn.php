@@ -21,7 +21,7 @@ session_start();
             <h1>Organiza<span>LAB</span></h1>
             </img>
         </div>
-        <form action="../includes/signIn.php" method="post" class="form">
+        <form action="../includes/signIn.php" method="post" class="form" autocomplete="off">
             <div class="flex-column">
                 <label>Email </label>
             </div>
