@@ -1,6 +1,5 @@
 <?php
 session_start();
-$email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +30,7 @@ $email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
                     <circle cx="12" cy="12" r="4" />
                     <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
                 </svg>
-                <input type="text" name="email" id="email" class="input" placeholder="Digite seu e-mail" value="<?php echo htmlspecialchars($email); ?>">
+                <input type="text" name="email" id="email" class="input" placeholder="Digite seu e-mail">
             </div>
 
             <div class="flex-column">
@@ -48,10 +47,6 @@ $email = isset($_COOKIE['remember_me']) ? $_COOKIE['remember_me'] : '';
             </div>
 
             <div class="flex-row">
-                <div>
-                    <input type="checkbox" name="remember_me" <?php echo isset($_COOKIE['remember_me']) ? 'checked' : ''; ?>>
-                    <label>Lembre-se de mim</label>
-                </div>
                 <span class="span">Esqueceu a senha?</span>
             </div>
             <button type="submit" id="button-submit">Entrar</button>
