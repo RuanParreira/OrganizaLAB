@@ -53,7 +53,7 @@
                 <button id="mostrarSenhas" type="button"><i class="fa-regular fa-eye"></i></button>
             </div>
 
-            <button type="input" id="button-submit">Registar</button>
+            <button type="submit" id="button-submit">Registar</button>
             <p class="p">Já tem uma conta? <a href="signIn.php" class="span">Entrar</a>
         </form>
     </main>
