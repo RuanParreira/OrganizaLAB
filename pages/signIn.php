@@ -30,7 +30,7 @@ session_start();
                     <circle cx="12" cy="12" r="4" />
                     <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
                 </svg>
-                <input type="text" name="email" id="email" class="input" placeholder="Digite seu e-mail">
+                <input type="text" name="email" id="email" class="input" placeholder="Digite seu e-mail" autocomplete="off">
             </div>
 
             <div class="flex-column">
@@ -42,7 +42,7 @@ session_start();
                     <rect x="3" y="10" width="18" height="12" rx="2" />
                     <path d="M7 10V7a5 5 0 0 1 10 0v3" />
                 </svg>
-                <input type="password" name="password" id="password" class="input" placeholder="Digite sua senha">
+                <input type="password" name="password" id="password" class="input" placeholder="Digite sua senha" autocomplete="off">
                 <button id="mostrarSenhas" type="button"><i class="fa-regular fa-eye"></i></button>
             </div>
 
