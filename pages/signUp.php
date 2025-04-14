@@ -17,7 +17,7 @@
             <h1>Organiza<span>LAB</span></h1>
             </img>
         </div>
-        <form action="../includes/signUp.php" method="post" class="form">
+        <form action="../includes/signUp.php" method="post" class="form" autocomplete="off">
             <div class="flex-column">
                 <label>Usuario</label>
             </div>
@@ -26,7 +26,7 @@
                     <circle cx="12" cy="8" r="5" />
                     <path d="M20 21a8 8 0 0 0-16 0" />
                 </svg>
-                <input type="text" name="username" id="username" class="input" placeholder="Digite seu usuario" required>
+                <input type="text" name="username" id="username" class="input" placeholder="Digite seu usuario" autocomplete="off" required>
             </div>
 
             <div class="flex-column">
@@ -37,7 +37,7 @@
                     <circle cx="12" cy="12" r="4" />
                     <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
                 </svg>
-                <input type="text" name="email" id="email" class="input" placeholder="Digite seu e-mail" required>
+                <input type="text" name="email" id="email" class="input" placeholder="Digite seu e-mail" autocomplete="off" required>
             </div>
 
             <div class="flex-column">
@@ -49,7 +49,7 @@
                     <rect x="3" y="10" width="18" height="12" rx="2" />
                     <path d="M7 10V7a5 5 0 0 1 10 0v3" />
                 </svg>
-                <input type="password" name="password" id="password" class="input" placeholder="Digite sua senha" required>
+                <input type="password" name="password" id="password" class="input" placeholder="Digite sua senha" autocomplete="new-password" required>
                 <button id="mostrarSenhas" type="button"><i class="fa-regular fa-eye"></i></button>
             </div>
 

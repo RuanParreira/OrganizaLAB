@@ -42,7 +42,7 @@ session_start();
                     <rect x="3" y="10" width="18" height="12" rx="2" />
                     <path d="M7 10V7a5 5 0 0 1 10 0v3" />
                 </svg>
-                <input type="password" name="password" id="password" class="input" placeholder="Digite sua senha" autocomplete="off">
+                <input type="password" name="password" id="password" class="input" placeholder="Digite sua senha" autocomplete="new-password">
                 <button id="mostrarSenhas" type="button"><i class="fa-regular fa-eye"></i></button>
             </div>
 
