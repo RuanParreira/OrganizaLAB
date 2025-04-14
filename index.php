@@ -78,12 +78,12 @@
 
         <section id="form">
             <h6>Fale <span>conosco!</span></h6>
-            <form id="form-cont" action="" method="post">
+            <form id="form-cont" action="https://formsubmit.co/suporte@organizalab.site" method="post">
                 <h5>Mande um <span>E-MAIL</span></h5>
                 <input type="text" name="nome" id="nome" placeholder="NOME:" required>
                 <input type="email" name="email" id="email" placeholder="E-MAIL:" required>
-                <textarea name="mensagem" id="mensagem" placeholder="MENSAGEM:"></textarea>
-                <button>ENVIAR</button>
+                <textarea name="mensagem" id="mensagem" placeholder="MENSAGEM:" required></textarea>
+                <button type="submit">ENVIAR</button>
         </section>
     </main>
 
