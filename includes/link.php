@@ -1,11 +1,6 @@
 <?php
 $env = parse_ini_file(__DIR__ . '/../.env');
 
-// $servidor = "localhost";
-// $usuario = "root";
-// $senha = "";
-// $dbname = "organizalab";
-
 $servidor = $env['DB_SERVER'];
 $usuario = $env['DB_USER'];
 $senha = $env['DB_PASSWORD'];
