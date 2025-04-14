@@ -105,6 +105,4 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </nav>
 </aside>
 
-
-<script src="../scripts/menuMobile.js"></script>
 <script src="../scripts/sidebar.js"></script>
