@@ -250,9 +250,6 @@ header {
         height: calc(6rem + env(safe-area-inset-bottom));
     }
 
-    #mobile ul {
-        padding-bottom: env(safe-area-inset-bottom);
-    }
 
     #sMobile {
         width: 100%;
