@@ -60,7 +60,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
             <li class="side-item <?php echo $current_page == 'finished.php' ? 'active' : ''; ?>">
                 <a href="../pages/finished.php">
-                    <i class="fa-solid fa-thumbs-up"></i>
+                    <i class="fa-solid fa-filter"></i>
                     <span class="item-description"> Finalizados </span>
                 </a>
             </li>
@@ -73,7 +73,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <ul id='mobile-items'>
             <li class="mobile-item <?php echo $current_page == 'home.php' ? 'active' : ''; ?>">
                 <a href="../pages/home.php">
-                    <i class="fa-solid fa-house"></i>
+                    <i class="fa-solid fa-house"></i> <br>
                 </a>
             </li>
             <li class="mobile-item <?php echo $current_page == 'services.php' ? 'active' : ''; ?>">
@@ -98,7 +98,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </li>
             <li class="mobile-item <?php echo $current_page == 'finished.php' ? 'active' : ''; ?>">
                 <a href="../pages/finished.php">
-                    <i class="fa-solid fa-thumbs-up"></i>
+                    <i class="fa-solid fa-filter"></i>
                 </a>
             </li>
         </ul>

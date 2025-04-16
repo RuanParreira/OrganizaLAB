@@ -51,7 +51,9 @@ include("../includes/link.php");
 
     <div id="cards">
       <div class="card active" id="card-iniciados">
-        <h2>Não Iniciados</h2>
+        <a href="nStarted.php">
+          <h2>Não Iniciados</h2>
+        </a>
         <?php
         if ($result0->num_rows > 0) {
           while ($row = $result0->fetch_assoc()) {
@@ -69,8 +71,9 @@ include("../includes/link.php");
 
       <!-- Card para status 1 -->
       <div class="card" id="card-progresso">
-
-        <h2>Em Progresso</h2>
+        <a href="inProgress.php">
+          <h2>Em Progresso</h2>
+        </a>
         <?php
         if ($result1->num_rows > 0) {
           while ($row = $result1->fetch_assoc()) {
@@ -89,7 +92,9 @@ include("../includes/link.php");
 
       <!-- Card para status 2 -->
       <div class="card" id="card-concluido">
-        <h2>Concluídos</h2>
+        <a href="done.php">
+          <h2>Concluídos</h2>
+        </a>
         <?php
         if ($result2->num_rows > 0) {
           while ($row = $result2->fetch_assoc()) {

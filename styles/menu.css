@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 body {
@@ -244,13 +246,13 @@ header {
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: black;
         height: calc(6rem + env(safe-area-inset-bottom));
+        padding: 0 4%;
         padding-bottom: env(safe-area-inset-bottom);
         z-index: 100;
+        background-color: rgb(15, 1, 28, 0.8);
+        backdrop-filter: blur(25px);
     }
-
-
 
     #sMobile {
         width: 100%;

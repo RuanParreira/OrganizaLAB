@@ -29,6 +29,10 @@ main {
     background-color: #424242;
 }
 
+.card a {
+    text-decoration: none;
+}
+
 .card h2 {
     font-size: 3rem;
     margin-bottom: 0.05rem;
