@@ -246,8 +246,12 @@ header {
         background-color: black;
         width: 100%;
         padding: 0 5%;
-        height: 6rem;
         z-index: 100;
+        height: calc(6rem + env(safe-area-inset-bottom));
+    }
+
+    #mobile ul {
+        padding-bottom: env(safe-area-inset-bottom);
     }
 
     #sMobile {
