@@ -241,15 +241,16 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: 0;
         position: fixed;
-        background-color: black;
+        bottom: 0;
+        left: 0;
         width: 100%;
-        padding: 0 5%;
-        z-index: 100;
+        background-color: black;
         height: calc(6rem + env(safe-area-inset-bottom));
         padding-bottom: env(safe-area-inset-bottom);
+        z-index: 100;
     }
+
 
 
     #sMobile {

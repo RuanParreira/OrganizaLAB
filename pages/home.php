@@ -11,6 +11,7 @@ include("../includes/link.php");
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles/home.css" />
   <link rel="icon" href="../images/logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Inicio-OrganizaLAB</title>
 </head>
 
