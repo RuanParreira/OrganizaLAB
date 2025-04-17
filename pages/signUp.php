@@ -37,7 +37,7 @@
                     <circle cx="12" cy="12" r="4" />
                     <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
                 </svg>
-                <input type="text" name="email" id="email" class="input" placeholder="Digite seu e-mail" autocomplete="off" required>
+                <input type="text" name="email" id="email" class="input" placeholder="Digite seu e-mail" value="<?php echo isset($_GET['email']) ? htmlspecialchars($_GET['email']) : ''; ?>" autocomplete="off" required>
             </div>
 
             <div class="flex-column">

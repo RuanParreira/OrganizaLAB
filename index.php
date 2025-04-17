@@ -42,9 +42,11 @@
         <section id="hero">
             <div id="hero-cont">
                 <h2>Seu laboratório de informática sempre <span>ORGANIZADO!</span></h2>
-                <p>O OrganizaLAB ajuda a gerenciar laboratórios de informática de forma prática e organizada,
-                    facilitando o controle de equipamentos</p>
-                <button onclick="window.location.href='pages/signUp.php'">Começar</button>
+                <p>O OrganizaLAB ajuda a gerenciar laboratórios de informática de forma prática e organizada, facilitando o controle de equipamentos</p>
+                <form id="hero-form" action="pages/signUp.php" method="get">
+                    <input type="text" name="email" id="email" placeholder="E-MAIL">
+                    <button type="submit">Começar</button>
+                </form>
             </div>
             <img src="images/hero.svg" alt="">
         </section>
@@ -88,7 +90,7 @@
     </main>
 
     <footer>
-        <p>Feito por Ruan Parreira © 2025</p>
+        <p>Feito por Ruan Parreira &copy; 2025</p>
     </footer>
 
 
