@@ -16,18 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalAvatar = document.querySelector('.modal-avatar');
 
     avatarBtn.addEventListener('click', function () {
-        // Alterna a exibição do modal-avatar
-        if (modalAvatar.style.display === 'none' || modalAvatar.style.display === '') {
-            modalAvatar.style.display = 'block';
-        } else {
-            modalAvatar.style.display = 'none';
-        }
+        // Alterna a classe 'show' para exibir ou ocultar o modal-avatar
+        modalAvatar.classList.toggle('show');
     });
 
     // Fecha o modal se clicar fora dele
     document.addEventListener('click', function (event) {
         if (!avatarBtn.contains(event.target) && !modalAvatar.contains(event.target)) {
-            modalAvatar.style.display = 'none';
+            modalAvatar.classList.remove('show');
         }
     });
 });

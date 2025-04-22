@@ -1,158 +1,155 @@
 main {
-    margin-left: 8rem;
-    margin-top: 5.6rem;
-    height: calc(100% - 5.6rem);
-    width: calc(100% - 8rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  margin-left: 8rem;
+  margin-top: 5.6rem;
+  height: calc(100% - 5.6rem);
+  width: calc(100% - 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 main h1 {
-    font-size: 3rem;
-    text-align: center;
-    padding: 1rem;
-    color: whitesmoke;
-    text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+  color: whitesmoke;
+  text-transform: uppercase;
 }
 
 main span {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 #nResultado {
-    font-size: 2.5rem;
-    text-align: center;
-    color: white;
-    position: fixed;
-    top: 50%;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  position: fixed;
+  top: 50%;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch;
-    width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  width: fit-content;
 }
 
 .card {
-    background-color: #424242;
-    border-radius: 0.8rem;
-    box-shadow: 0 1rem 3rem -1rem black;
-    padding: 2rem;
-    width: 30rem;
-    text-align: left;
-    color: white;
-    display: flex;
-    flex-direction: column;
+  background-color: #424242;
+  border-radius: 0.8rem;
+  box-shadow: 0 1rem 3rem -1rem black;
+  padding: 2rem;
+  width: 30rem;
+  text-align: left;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-fundo {
-    background-color: #4f4f4f;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    flex-grow: 1;
+  background-color: #4f4f4f;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
 .card-fundo p {
-    font-size: 1.5rem;
-    word-wrap: break-word;
-    /* Permite a quebra de palavras longas */
-    word-break: break-word;
-    /* Garante a quebra de palavras longas */
-    overflow-wrap: break-word;
-    /* Compatibilidade adicional */
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  /* Permite a quebra de palavras longas */
+  word-break: break-word;
+  /* Garante a quebra de palavras longas */
+  overflow-wrap: break-word;
+  /* Compatibilidade adicional */
 }
 
 .card h2 {
-    font-size: 3rem;
-    color: rgb(170, 106, 230);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+  font-size: 3rem;
+  color: rgb(170, 106, 230);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .card h3 {
-    font-size: 2rem;
-    color: rgb(170, 106, 230);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+  font-size: 2rem;
+  color: rgb(170, 106, 230);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
-
-
 
 /*botao*/
 
 .card button {
-    --color: white;
-    background-color: blueviolet;
-    font-family: inherit;
-    display: inline-block;
-    width: 100%;
-    height: 4.5rem;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    border: none;
-    transition: color 0.5s;
-    z-index: 1;
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--color);
-    border-radius: 1rem;
-    margin-top: auto;
+  --color: white;
+  background-color: blueviolet;
+  font-family: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 4.5rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color);
+  border-radius: 1rem;
+  margin-top: auto;
 }
 
 .card button:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background: var(--color);
-    height: 40rem;
-    width: 80rem;
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 40rem;
+  width: 80rem;
+  border-radius: 50%;
 }
 
 .card button:hover {
-    color: black;
+  color: black;
 }
 
 .card button:before {
-    top: 100%;
-    left: 100%;
-    transition: all 0.7s;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
 }
 
 .card button:hover:before {
-    top: -8rem;
-    left: -10rem;
+  top: -8rem;
+  left: -10rem;
 }
 
 /* Resposivo */
 
 @media screen and (max-width: 1200px) {
-    main {
-        margin-top: 0;
-        margin-left: 0;
-        width: 100%;
-        margin-bottom: 8rem;
-        padding: 0 4%;
+  main {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 8rem;
+    padding: 0 4%;
+  }
 
-    }
+  .cards {
+    width: 100%;
+  }
 
-    .cards {
-        width: 100%;
-    }
-
-    .card {
-        width: 100%;
-    }
+  .card {
+    width: 100%;
+  }
 }

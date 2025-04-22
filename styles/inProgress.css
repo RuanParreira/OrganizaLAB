@@ -1,314 +1,311 @@
 main {
-    margin-left: 8rem;
-    margin-top: 5.6rem;
-    height: calc(100% - 5.6rem);
-    width: calc(100% - 8rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  margin-left: 8rem;
+  margin-top: 5.6rem;
+  height: calc(100% - 5.6rem);
+  width: calc(100% - 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 main h1 {
-    text-transform: uppercase;
-    font-size: 3rem;
-    text-align: center;
-    padding: 1rem;
-    color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+  color: whitesmoke;
 }
 
 main span {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 #nResultado {
-    position: fixed;
-    top: 50%;
-    font-size: 2.5rem;
-    text-align: center;
-    color: white;
+  position: fixed;
+  top: 50%;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
 }
 
 /*Cards*/
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .card {
-    background-color: #424242;
-    border-radius: 0.8rem;
-    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    width: 30rem;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
+  background-color: #424242;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 30rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .infoFundo {
-    background-color: #4f4f4f;
-    padding: 1rem;
-    border-radius: 1rem;
-    flex-grow: 1;
+  background-color: #4f4f4f;
+  padding: 1rem;
+  border-radius: 1rem;
+  flex-grow: 1;
 }
 
 .card .observacao-container {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 .card-header h2 {
-    font-size: 3rem;
-    color: rgb(170, 106, 230);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+  font-size: 3rem;
+  color: rgb(170, 106, 230);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .card-header h3 {
-    font-size: 2rem;
-    color: rgb(170, 106, 230);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
+  font-size: 2rem;
+  color: rgb(170, 106, 230);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .card p {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: white;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: white;
 }
 
 .card textarea {
-    width: 100%;
-    height: 8rem;
-    resize: none;
-    border: none;
-    border-radius: 0.4rem;
-    padding: 1rem;
-    font-size: 1.5rem;
-    color: white;
-    background-color: #4f4f4f;
-    box-shadow: inset 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
-    cursor: auto;
-    outline: none;
-    margin-top: 0.5rem;
-    /* Espaçamento entre o texto e o textarea */
+  width: 100%;
+  height: 8rem;
+  resize: none;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #4f4f4f;
+  box-shadow: inset 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+  cursor: auto;
+  outline: none;
+  margin-top: 0.5rem;
+  /* Espaçamento entre o texto e o textarea */
 }
 
 .observacao-container p {
-    text-transform: uppercase;
-    color: rgb(170, 106, 230);
+  text-transform: uppercase;
+  color: rgb(170, 106, 230);
 }
 
 #botoes {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    justify-content: space-between;
-    /* Alinha os botões à direita */
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: space-between;
+  /* Alinha os botões à direita */
 }
 
 .card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 8rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 8rem;
+  width: 100%;
 }
 
-
 /*Cards*/
-
 
 /*Botoes Default*/
 
 .card button {
-    --color: white;
-    background-color: blueviolet;
-    font-family: inherit;
-    display: inline-block;
-    width: 8rem;
-    height: 4.5rem;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    border: none;
-    transition: color 0.5s;
-    z-index: 1;
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--color);
-    border-radius: 1rem;
-    margin-top: 0.5rem;
+  --color: white;
+  background-color: blueviolet;
+  font-family: inherit;
+  display: inline-block;
+  width: 8rem;
+  height: 4.5rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color);
+  border-radius: 1rem;
+  margin-top: 0.5rem;
 }
 
 .card button:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background: var(--color);
-    height: 40rem;
-    width: 80rem;
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 40rem;
+  width: 80rem;
+  border-radius: 50%;
 }
 
 .card button:hover {
-    color: black;
+  color: black;
 }
 
 .card button:before {
-    top: 100%;
-    left: 100%;
-    transition: all 0.7s;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
 }
 
 .card button:hover:before {
-    top: -8rem;
-    left: -10rem;
+  top: -8rem;
+  left: -10rem;
 }
 
 /*Botoes Default*/
 
-
 /* Editar */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    /* Inicialmente invisível */
-    transition: opacity 0.3s ease-in-out;
-    /* Transição suave para visibilidade */
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  /* Inicialmente invisível */
+  transition: opacity 0.3s ease-in-out;
+  /* Transição suave para visibilidade */
 }
 
 .modal.show {
-    display: block;
-    opacity: 1;
-    /* Torna visível */
+  display: block;
+  opacity: 1;
+  /* Torna visível */
 }
 
 .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    /* Inicialmente menor */
-    background-color: #424242;
-    color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    width: 40rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out forwards;
-    /* Animação suave */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  /* Inicialmente menor */
+  background-color: #424242;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 40rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out forwards;
+  /* Animação suave */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .modal-content h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2.4rem;
-    color: blueviolet;
-    text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.4rem;
+  color: blueviolet;
+  text-align: center;
 }
 
 .modal-content label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
-    color: whitesmoke;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: whitesmoke;
 }
 
 .modal-content input,
 .modal-content textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #4f4f4f;
-    color: white;
-    font-size: 1.4rem;
-    box-sizing: border-box;
-    outline: none;
-    resize: none;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #4f4f4f;
+  color: white;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
 }
 
 .modal-content button {
-    background-color: blueviolet;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    font-size: 1.6rem;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
 }
 
 .modal-content button:hover {
-    background-color: #5a2ea6;
+  background-color: #5a2ea6;
 }
 
 .close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2.4rem;
-    color: white;
-    cursor: pointer;
-    background: none;
-    border: none;
-    outline: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.4rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .close:hover {
-    color: red;
+  color: red;
 }
 
 /* Animação de entrada */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.9);
-        /* Começa menor e invisível */
-    }
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    /* Começa menor e invisível */
+  }
 
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-        /* Fica visível e no tamanho normal */
-    }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    /* Fica visível e no tamanho normal */
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    main {
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 8rem;
-        width: 100%;
-        padding: 0 4%;
-    }
+  main {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 8rem;
+    width: 100%;
+    padding: 0 4%;
+  }
 
-    .card {
-        width: 100%
-    }
+  .card {
+    width: 100%;
+  }
 
-    .cards {
-        width: 100%;
-    }
+  .cards {
+    width: 100%;
+  }
 }

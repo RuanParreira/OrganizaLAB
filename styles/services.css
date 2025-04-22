@@ -121,7 +121,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Responsivel */
 
 @media screen and (max-width: 1200px) {
-
   header {
     position: relative;
   }
