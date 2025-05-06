@@ -9,21 +9,3 @@ document.addEventListener('click', function (event) {
         sidebar.classList.remove('open-sidebar');
     }
 });
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const avatarBtn = document.getElementById('avatar-btn');
-    const modalAvatar = document.querySelector('.modal-avatar');
-
-    avatarBtn.addEventListener('click', function () {
-        // Alterna a classe 'show' para exibir ou ocultar o modal-avatar
-        modalAvatar.classList.toggle('show');
-    });
-
-    // Fecha o modal se clicar fora dele
-    document.addEventListener('click', function (event) {
-        if (!avatarBtn.contains(event.target) && !modalAvatar.contains(event.target)) {
-            modalAvatar.classList.remove('show');
-        }
-    });
-});

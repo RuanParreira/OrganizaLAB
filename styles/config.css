@@ -29,7 +29,7 @@ header {
   justify-content: space-between;
   width: 100%;
   height: 5.6rem;
-  padding: 0 3.5rem;
+  padding: 0 10%;
   background-color: #424242;
   color: white;
   position: fixed;
@@ -81,14 +81,14 @@ header {
   padding: 1rem 0;
   width: 20rem;
   opacity: 0;
-  /* Invisível inicialmente */
   transform: translateY(-10px);
-  /* Move um pouco para cima */
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* Animação suave */
   z-index: 200;
   pointer-events: none;
-  /* Evita cliques quando invisível */
+}
+
+.modal-avatar a {
+  text-decoration: none;
 }
 
 /* Estado visível */
@@ -124,19 +124,6 @@ header {
   background-color: #1c1c1c;
 }
 
-.modal-avatar li button {
-  all: unset;
-  cursor: pointer;
-  font-size: 1.6rem;
-  color: white;
-  width: 100%;
-  text-align: left;
-}
-
-.modal-avatar li button:hover {
-  color: blueviolet;
-}
-
 #seta-modal {
   position: absolute;
   font-size: 2rem;
@@ -145,53 +132,78 @@ header {
   z-index: 201;
 }
 
-/*sair*/
-
 #sair {
-  --color: white;
-  background-color: blueviolet;
-  font-family: inherit;
-  display: inline-block;
-  width: 80%;
-  height: 2em;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
   border: none;
-  transition: color 0.5s;
-  z-index: 1;
-  font-size: 1.7rem;
-  border-radius: 0.6rem;
-  font-weight: 500;
-  color: var(--color);
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 1rem;
-}
-
-#sair:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--color);
-  height: 15rem;
-  width: 25rem;
-  border-radius: 50%;
-}
-
-#sair:hover {
-  color: black;
-}
-
-#sair:before {
-  top: 100%;
-  left: 100%;
-  transition: all 0.7s;
-}
-
-#sair:hover:before {
-  top: -3rem;
-  left: -3rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  align-items: center;
 }
 
 /*header*/
+
+main {
+  height: calc(100vh - 5.6rem);
+  margin-top: 5.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 4rem;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+section .avatar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+section .avatar .avatar-edit {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+section .avatar span {
+  font-size: 2rem;
+  color: white;
+}
+
+section .avatar input {
+  height: 5.6rem;
+  width: 100%;
+}
+
+section .avatar input {
+  padding-left: 2rem;
+}
+
+section .avatar img {
+  width: 12rem;
+  height: 12rem;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+section .contato input {
+  height: 8.8rem;
+  width: 100%;
+}

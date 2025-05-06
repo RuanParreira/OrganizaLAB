@@ -1,3 +1,20 @@
+<?php
+include("../includes/validate.php");
+include("../includes/link.php");
+
+$sql = "SELECT username FROM users WHERE id_user = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $id_user);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+$username = $user['username'] ?? '';
+
+// Feche a conexão
+$stmt->close();
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,6 +22,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/config.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>Configurações-OrganizaLAB</title>
 </head>
 
@@ -28,14 +50,16 @@
             <path d="M13.73 4a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
             </svg>
             <ul class="modal-cont">
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-pen-icon lucide-user-pen">
-                        <path d="M11.5 15H7a4 4 0 0 0-4 4v2" />
-                        <path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
-                        <circle cx="10" cy="7" r="4" />
-                    </svg>
-                    Perfil
-                </li>
+                <a href="../pages/config.php">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-pen-icon lucide-user-pen">
+                            <path d="M11.5 15H7a4 4 0 0 0-4 4v2" />
+                            <path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+                            <circle cx="10" cy="7" r="4" />
+                        </svg>
+                        Perfil
+                    </li>
+                </a>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings">
                         <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
@@ -45,13 +69,46 @@
                 </li>
                 <hr>
                 <button id="sair" onclick="window.location.href='../includes/leave.php'">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    SAIR
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-door-open-icon lucide-door-open">
+                            <path d="M11 20H2" />
+                            <path d="M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z" />
+                            <path d="M11 4H8a2 2 0 0 0-2 2v14" />
+                            <path d="M14 12h.01" />
+                            <path d="M22 20h-3" />
+                        </svg>
+                        SAIR
                 </button>
-
+                </li>
             </ul>
         </div>
     </header>
+
+    <main>
+        <section>
+            <h1>Editar Perfil</h1>
+            <div class="avatar">
+                <img src="../images/logo.png" alt="">
+                <div class="avatar-edit">
+                    <span>NOME: </span>
+                    <input type="text" value="<?php echo htmlspecialchars($username); ?>">
+                </div>
+            </div>
+            <hr>
+            <h2>Informações de Contato</h2>
+            <div class="contato">
+                <input type="text">
+                <p>O email associado a este perfil também é usado para acessar e
+                    recuperar a conta. Para fazer alterações, acesse a segurança da conta.</p>
+            </div>
+            <div class="save">
+                <button></button>
+                <button></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/avatar.js"></script>
 </body>
 
 </html>
