@@ -2,15 +2,15 @@
 include("../includes/validate.php");
 include("../includes/link.php");
 
-$sql = "SELECT username FROM users WHERE id_user = ?";
+$sql = "SELECT username, email FROM users WHERE id_user = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id_user);
 $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 $username = $user['username'] ?? '';
+$email = $user['email'] ?? '';
 
-// Feche a conexão
 $stmt->close();
 $conn->close();
 ?>
@@ -86,25 +86,36 @@ $conn->close();
 
     <main>
         <section>
-            <h1>Editar Perfil</h1>
-            <div class="avatar">
-                <img src="../images/logo.png" alt="">
-                <div class="avatar-edit">
-                    <span>NOME: </span>
-                    <input type="text" value="<?php echo htmlspecialchars($username); ?>">
+            <form method="POST" action="../includes/updateProfile.php">
+                <h1>Editar Perfil</h1>
+                <div class="avatar">
+                    <img src="../images/logo.png" alt="">
+                    <div class="avatar-edit">
+                        <span>NOME: </span>
+                        <input type="text" name="username" value="<?php echo htmlspecialchars($username); ?>" required>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <h2>Informações de Contato</h2>
-            <div class="contato">
-                <input type="text">
+                <hr>
+                <h2>Informações de Contato</h2>
+                <div class="contato">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
+                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                    </svg>
+                    <div class="contato-cont">
+                        <span>Email</span>
+                        <?php
+                        echo '<p>' . htmlspecialchars($email) . '</p>';
+                        ?>
+                    </div>
+                </div>
                 <p>O email associado a este perfil também é usado para acessar e
                     recuperar a conta. Para fazer alterações, acesse a segurança da conta.</p>
-            </div>
-            <div class="save">
-                <button></button>
-                <button></button>
-            </div>
+                <div class="save">
+                    <button type="submit" id="salvar">Salvar</button>
+                    <button type="button" id="cancelar" onclick="window.location.href='config.php'">Cancelar</button>
+                </div>
+            </form>
         </section>
     </main>
 
