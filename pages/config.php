@@ -22,6 +22,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/config.css">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,7 +35,10 @@ $conn->close();
     <header>
         <div class="starter">
             <a id="header-home" href="home.php">
-                <h1>Organiza<span>LAB<span></h1>
+                <img src="../images/favicon.png" alt="">
+                <?php
+                echo "<h1>" . htmlspecialchars($username) . "</h1>";
+                ?>
             </a>
         </div>
         <button id="avatar-btn">
@@ -50,6 +54,16 @@ $conn->close();
             <path d="M13.73 4a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
             </svg>
             <ul class="modal-cont">
+                <a href="../pages/home.php">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left">
+                            <path d="m12 19-7-7 7-7" />
+                            <path d="M19 12H5" />
+                        </svg>
+                        Voltar à OrganizaLAB
+                    </li>
+                </a>
+                <hr>
                 <a href="../pages/config.php">
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-pen-icon lucide-user-pen">
@@ -91,11 +105,11 @@ $conn->close();
                 <div class="avatar">
                     <img src="../images/logo.png" alt="">
                     <div class="avatar-edit">
-                        <span>NOME: </span>
+                        <span>Nome</span>
                         <input type="text" name="username" value="<?php echo htmlspecialchars($username); ?>" required>
                     </div>
                 </div>
-                <hr>
+
                 <h2>Informações de Contato</h2>
                 <div class="contato">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">

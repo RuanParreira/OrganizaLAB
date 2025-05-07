@@ -42,6 +42,15 @@ header {
 #header-home {
   text-decoration: none;
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#header-home img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
 }
 
 .starter {
@@ -310,5 +319,15 @@ header {
 
   #sMobile .mobile-item.active i {
     color: blueviolet;
+  }
+
+  /* config */
+
+  #seta-modal {
+    position: absolute;
+    font-size: 2rem;
+    top: -1.5rem;
+    right: 2rem;
+    z-index: 201;
   }
 }

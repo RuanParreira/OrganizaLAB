@@ -1,4 +1,18 @@
 <?php
+include("../includes/validate.php");
+include("../includes/link.php");
+
+// Recupera o nome do usuário
+$sql = "SELECT username FROM users WHERE id_user = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $id_user);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+$username = $user['username'] ?? 'Usuário';
+
+$stmt->close();
+
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
@@ -14,7 +28,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <i class="fa-solid fa-bars"></i>
         </button>
         <a id="header-home" href="home.php">
-            <h1>Organiza<span>LAB<span></h1>
+            <img src="../images/favicon.png" alt="">
+            <?php
+            echo "<h1>" . htmlspecialchars($username) . "</h1>"
+            ?>
         </a>
     </div>
     <button id="avatar-btn">

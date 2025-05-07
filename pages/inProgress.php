@@ -10,7 +10,7 @@ include("../includes/link.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <link rel="stylesheet" href="../styles/inProgress.css" />
-    <link rel="icon" href="../images/logo.png" type="image/x-icon" />
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
     <title>Serviços em Progresso</title>
 </head>
 
@@ -45,14 +45,12 @@ include("../includes/link.php");
                     echo "<p><strong>Observações:</strong></p>";
                     echo "<textarea readonly>" . htmlspecialchars($row['obs']) . "</textarea>";
                     echo "</div>";
-                    echo "<div id='botoes'>";
-                    echo "<form method='POST' action='../includes/inProgress.php' style='margin: 0;'>";
+                    echo "<form method='POST' id='botoes' action='../includes/inProgress.php'>";
                     echo "<input type='hidden' name='id_service' value='" . htmlspecialchars($row['id_service']) . "'>";
                     echo "<button type='submit'>Pronto</button>";
-                    echo "</form>";
                     echo "<button type='button' class='edit-btn' onclick='openEditModal(" . htmlspecialchars(json_encode($row)) . ")'>Editar</button>";
                     echo "<button type='button' class='delete-btn' onclick='confirmDelete(" . htmlspecialchars($row['id_service']) . ")'>Excluir</button>";
-                    echo "</div>";
+                    echo "</form>";
                     echo "</div>";
                 }
             } else {

@@ -90,48 +90,19 @@ main span {
 /*botao*/
 
 .card button {
-  --color: white;
-  background-color: blueviolet;
-  font-family: inherit;
-  display: inline-block;
   width: 100%;
+  font-size: 1.6rem;
   height: 4.5rem;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
+  background-color: blueviolet;
+  color: #1c1c1c;
+  font-weight: bold;
   border: none;
-  transition: color 0.5s;
-  z-index: 1;
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--color);
-  border-radius: 1rem;
-  margin-top: auto;
-}
-
-.card button:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--color);
-  height: 40rem;
-  width: 80rem;
-  border-radius: 50%;
+  border-radius: 0.8rem;
+  cursor: pointer;
 }
 
 .card button:hover {
-  color: black;
-}
-
-.card button:before {
-  top: 100%;
-  left: 100%;
-  transition: all 0.7s;
-}
-
-.card button:hover:before {
-  top: -8rem;
-  left: -10rem;
+  background-color: rgb(170, 106, 230);
 }
 
 /* Resposivo */
