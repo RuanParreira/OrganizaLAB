@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-zinc-900/95 text-white;
+        font-family: var(--font-sans);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #18181b; /* zinc-900 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #52525b; /* zinc-600 */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #71717a; /* zinc-500 */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #52525b #18181b;
+}
+
+/* Componentes Defaults */
+@layer components {
+    .input-default {
+        @apply block w-full rounded-md bg-zinc-900 px-4 py-2 mt-1 text-base text-white outline-1 -outline-offset-1 outline-white/10 focus:outline-1 focus:-outline-offset-1 focus:outline-violet-600 border border-gray-400/30;
+    }
+    .input-default-icon {
+        @apply flex items-center pl-10 w-68 pr-2 py-2 rounded-md bg-zinc-900 text-base text-white outline-1 -outline-offset-1 outline-white/10 focus:outline-1 focus:-outline-offset-1 focus:outline-violet-600 border border-gray-400/30;
+    }
+    .icon-input {
+        @apply text-gray-400 absolute left-3 top-1/2 -translate-y-1/2;
+    }
+}
