@@ -4,10 +4,14 @@ namespace App\Http\Controllers\Services;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Services\CreateService;
+use App\Models\Client;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
+    use AuthorizesRequests;
+
     public function index(Request $request)
     {
         $clients = $request->user()

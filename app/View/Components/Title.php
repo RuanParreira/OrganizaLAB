@@ -11,13 +11,11 @@ class title extends Component
     public string $title;
     public ?string $subtitle;
     public string $icon;
-    public string $size;
-    public function __construct(string $title, ?string $subtitle = null, string $icon, string $size = '3xl')
+    public function __construct(string $title, ?string $subtitle = null, string $icon)
     {
         $this->title = $title;
         $this->subtitle = $subtitle;
         $this->icon = $icon;
-        $this->size = $size;
     }
 
     /**

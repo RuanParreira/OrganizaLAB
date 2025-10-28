@@ -1,8 +1,8 @@
 @extends('layouts.default')
 @section('title', 'Clients')
 @section('content')
-    <x-title title="Registrar Cliente" subtitle="Cadastre novos clientes no sistema" icon="bi bi-person-plus" size="4xl" />
-    <div class="bg-zinc-700/40 border border-gray-400/30 rounded-xl p-6">
+    <x-title title="Registrar Cliente" subtitle="Cadastre novos clientes no sistema" icon="bi bi-person-plus" size="3xl" />
+    <div class="bg-(--foreground) border border-(--border) rounded-xl px-6 py-4 shadow-lg">
         <div class="mb-4">
             <h3 class="text-xl font-semibold ">
                 Novo Cliente
@@ -64,7 +64,7 @@
             </div>
         </form>
     </div>
-    <div class="bg-zinc-700/40 border border-gray-400/30 rounded-xl p-6">
+    <div class="bg-(--foreground) border border-(--border) rounded-xl p-6 shadow-lg">
         <div class="flex items-center justify-between mb-4">
             <h3 class="text-xl font-semibold">
                 Clientes Cadastrados

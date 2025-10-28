@@ -17,8 +17,17 @@
         scroll-behavior: smooth;
     }
     body {
-        @apply bg-zinc-900/95 text-white;
+        @apply bg-(--background) text-white;
         font-family: var(--font-sans);
+    }
+
+    :root {
+        --menu: rgb(9%, 9%, 9%);
+        --background: rgb(11%, 11%, 11%);
+        --foreground: rgb(13%, 13%, 13%);
+        --border: rgb(19%, 19%, 21%);
+        --input: rgb(16%, 16%, 16%);
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -48,12 +57,18 @@
 /* Componentes Defaults */
 @layer components {
     .input-default {
-        @apply block w-full rounded-md bg-zinc-900 px-4 py-2 mt-1 text-base text-white outline-1 -outline-offset-1 outline-white/10 focus:outline-1 focus:-outline-offset-1 focus:outline-violet-600 border border-gray-400/30;
+        @apply block w-full rounded-md bg-(--input) px-4 py-2 mt-1 text-base text-white focus:outline-1 focus:-outline-offset-1 focus:outline-violet-600 border border-(--border) transition-all;
     }
     .input-default-icon {
-        @apply flex items-center pl-10 w-68 pr-2 py-2 rounded-md bg-zinc-900 text-base text-white outline-1 -outline-offset-1 outline-white/10 focus:outline-1 focus:-outline-offset-1 focus:outline-violet-600 border border-gray-400/30;
+        @apply flex items-center pl-10 w-68 pr-2 py-2 rounded-md bg-(--input) text-base text-white focus:outline-1 focus:-outline-offset-1 focus:outline-violet-600 border border-(--border) transition-all;
     }
     .icon-input {
         @apply text-gray-400 absolute left-3 top-1/2 -translate-y-1/2;
+    }
+    .btn-editar {
+        @apply text-lg text-blue-400 hover:text-blue-500 rounded-lg cursor-pointer flex justify-center items-center hover:scale-120 duration-300 transition-all;
+    }
+    .btn-deletar {
+        @apply font-normal text-red-400 hover:text-red-500 text-lg rounded-lg cursor-pointer flex justify-center items-center hover:scale-120 duration-300 transition-all;
     }
 }

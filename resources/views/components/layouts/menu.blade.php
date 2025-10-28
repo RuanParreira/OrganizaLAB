@@ -1,7 +1,7 @@
 <aside
     class="fixed top-0 left-0 hidden h-full w-[16rem] flex-col transition-all duration-300 lg:flex
-bg-zinc-900 border-r border-gray-400/30">
-    <a href="{{ route('dashboard') }}" class="p-6 border-b border-gray-400/30 flex items-center gap-2">
+bg-(--menu) border-r border-(--border)">
+    <a href="{{ route('dashboard') }}" class="p-6 border-b border-(--border) flex items-center gap-2">
         <img src="{{ asset('favicon.ico') }}" alt="OrganizaLAB Logo" class="h-8">
         <h1 class="text-xl font-bold">
             OrganizaLAB
@@ -23,7 +23,7 @@ bg-zinc-900 border-r border-gray-400/30">
         <x-layouts.menu-item href="{{ route('services.finished') }}" icon="bi bi-archive" :active="request()->routeIs('services.finished')"
             label="Finalizados" />
     </nav>
-    <div class="p-4 border-t border-gray-400/30 space-y-2">
+    <div class="p-4 border-t border-(--border) space-y-2">
         <x-layouts.menu-item href="{{ route('profile') }}" icon="bi bi-person" :active="request()->routeIs('profile', 'profile.edit')" label="Perfil" />
         <form method="POST" action="{{ route('auth.logout') }}">
             @csrf
