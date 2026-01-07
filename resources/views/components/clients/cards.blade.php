@@ -21,7 +21,12 @@
                 </div>
             </div>
             <p class="text-base text-gray-400">
-                CPF: {{ $client->cpf_cnpj }}
+                CPF:
+                @if (empty($client->cpf_cnpj))
+                    Sem Registro
+                @else
+                    {{ $client->cpf_cnpj }}
+                @endif
             </p>
             <p class="text-base text-gray-400">
                 Contato: {{ $client->number }}

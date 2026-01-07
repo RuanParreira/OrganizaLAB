@@ -18,7 +18,7 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnDelete()
                 ->noActionOnUpdate();
-            $table->string('cpf_cnpj', 14)->unique();
+            $table->string('cpf_cnpj', 14)->unique()->nullable();
             $table->string('name', 100);
             $table->string('number', 11);
             $table->timestamps();
